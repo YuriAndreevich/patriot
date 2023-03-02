@@ -2,19 +2,26 @@
 <html lang="en">
   <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
+<script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/whiteLogo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>ПАТРИОТ</title>
   </head>
   <body>
+    <img id="specialButton" style="cursor:pointer;" src="https://lidrekon.ru/images/special.png" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" />
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
     <script>
       let loader;
       let textLoader;
       let loadAnim;
-  
+
+
+
       document.addEventListener('DOMContentLoaded', () => {
         loader = document.querySelector('#loader');
         textLoader = document.querySelector('.loadingText');
@@ -38,8 +45,9 @@
           clearInterval(loadAnim);
         }, 500);
       });
+
     </script>
-  
+
     <div id="loader" scroll="no"
       style="position: fixed; left: 0;top: 0;z-index: 1000;transition:.5s opacity;width:100vw; height: 100vh; background: rgb(255, 255, 255);font-family: 'Gill Sans', sans-serif;">
       <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);color:rgb(0, 0, 0);">

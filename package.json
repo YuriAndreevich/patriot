@@ -1,6 +1,5 @@
 {
   "name": "patriot",
-  "homepage": "https://YuriAndreevich.github.io/patriotBNTU/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,10 +10,11 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.1",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "scss": "^0.2.4"
+    "sass": "^1.58.3"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
