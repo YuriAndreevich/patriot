@@ -15,7 +15,7 @@ function App() {
       <Patriot />
       {/* <BelarusMap /> */}
       {/* <TimeLine /> */}
-      {/* <AnimatedNumber /> */}
+      <AnimatedNumber text="Молодежные проекты" number={2412} />
     </div>
   );
 }
