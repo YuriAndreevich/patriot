@@ -10,10 +10,14 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.7.1",
     "@react-spring/web": "^9.7.1",
+    "canvas-confetti": "^1.6.0",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "react-timeline-animation": "^1.2.3",
     "sass": "^1.58.3"
   },
   "devDependencies": {

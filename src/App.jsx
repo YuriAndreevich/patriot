@@ -1,7 +1,12 @@
 import "./App.css";
-import { useEffect } from "react";
-import AnimatedNumber from "./components/AnimatedNumber";
 import Patriot from "./components/Patriot";
+
+import Navbar from "./components/navbar";
+
+import RightMenu from "./components/RightMenu";
+import AnimatedNumber from "./components/AnimatedNumber";
+import TimeLine from "./components/TimeLine";
+import BelarusMap from "./components/BelarusMap";
 
 function App() {
   // useEffect(() => {
@@ -16,8 +21,12 @@ function App() {
   // }, [element]);
   return (
     <div className="App">
+      {/* <Navbar /> */}
+      {/* <RightMenu /> */}
       <Patriot />
-      <AnimatedNumber />
+      {/* <BelarusMap /> */}
+      {/* <TimeLine /> */}
+      {/* <AnimatedNumber /> */}
     </div>
   );
 }
