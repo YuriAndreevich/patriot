@@ -10,15 +10,26 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@react-spring/parallax": "^9.7.1",
     "@react-spring/web": "^9.7.1",
     "canvas-confetti": "^1.6.0",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^10.0.1",
     "gh-pages": "^5.0.0",
+    "i18next": "^22.4.10",
+    "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-inlinesvg": "^3.0.2",
+    "react-pageflip": "^2.0.3",
     "react-router-dom": "^6.8.2",
     "react-timeline-animation": "^1.2.3",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "swiper": "^9.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

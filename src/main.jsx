@@ -10,6 +10,7 @@ import Page4 from "./components/Patriot/pages/page4";
 import Page5 from "./components/Patriot/pages/page5";
 import Page6 from "./components/Patriot/pages/page6";
 import Page7 from "./components/Patriot/pages/page7";
+import Genocide from "./components/genocide/Genocide";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/page7",
     element: <Page7 />,
+  },
+  {
+    path: "/genocide",
+    element: <Genocide />,
   },
 ]);
 
