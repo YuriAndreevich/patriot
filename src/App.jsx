@@ -1,6 +1,6 @@
 import Patriot from "./components/Patriot";
 
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/navbar";
 
 import RightMenu from "./components/RightMenu";
 import AnimatedNumber from "./components/AnimatedNumber";
@@ -15,9 +15,11 @@ function App() {
       <Patriot />
       {/* <BelarusMap /> */}
       {/* <TimeLine /> */}
-      <AnimatedNumber text="Молодежные проекты" number={2412} />
-      <AnimatedNumber text="Молодежные проекты" number={242} />
-      <AnimatedNumber text="Молодежные проекты" number={1502} />
+      <div className="flex justify-center gap-10 p-10">
+        <AnimatedNumber text="Молодежные проекты" number={2412} />
+        <AnimatedNumber text="Молодежные проекты" number={242} />
+        <AnimatedNumber text="Молодежные проекты" number={1502} />
+      </div>
     </div>
   );
 }

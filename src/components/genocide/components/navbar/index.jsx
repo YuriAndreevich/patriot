@@ -48,8 +48,6 @@ function Navbar() {
   const changeNavbar = () => {
     if (window.scrollY >= 900) {
       setColorNav(false);
-      console.log(ColorNav)
-      console.log(window.scrollY)
     }
   }
 

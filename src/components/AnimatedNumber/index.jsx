@@ -1,6 +1,5 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
-import "./AnimatedNumber.scss";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -10,7 +9,7 @@ function Number({ n }) {
     config: { mass: 1, tension: 20, friction: 10 },
   });
   return (
-    <animated.div className="AnimatedNumber-number">
+    <animated.div className="text-3xl sm:text-5xl text-green-600">
       {number.to((n) => n.toFixed(0))}
     </animated.div>
   );
@@ -18,9 +17,9 @@ function Number({ n }) {
 
 function index({ number, text }) {
   return (
-    <div className="AnimatedNumber">
+    <div>
       <Number n={number} />
-      {text}
+      <p className="text-sm sm:text-xl">{text}</p>
     </div>
   );
 }
