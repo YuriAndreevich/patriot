@@ -7,11 +7,9 @@ import AnimatedNumber from "./components/AnimatedNumber";
 import TimeLine from "./components/TimeLine";
 import BelarusMap from "./components/BelarusMap";
 
-
-
 function App() {
   return (
-    <div className="App p-10">
+    <div className="App">
       <Navbar />
       {/* <RightMenu /> */}
       <Patriot />
