@@ -16,9 +16,9 @@ function App() {
       {/* <BelarusMap /> */}
       {/* <TimeLine /> */}
       <div className="flex justify-center gap-10 p-10">
-        <AnimatedNumber text="Молодежные проекты" number={2412} />
-        <AnimatedNumber text="Молодежные проекты" number={242} />
-        <AnimatedNumber text="Молодежные проекты" number={1502} />
+        <AnimatedNumber text="Мероприятий проведено" number={25} />
+        <AnimatedNumber text="Личных достижений" number={242} />
+        <AnimatedNumber text="Молодежные проекты" number={32} />
       </div>
     </div>
   );

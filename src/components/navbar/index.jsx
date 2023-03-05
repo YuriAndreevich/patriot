@@ -7,6 +7,9 @@ function navbar() {
       <Link to="/" className="hover:text-green-600 hover:transition-all">
         Главная
       </Link>
+      <Link to="/news" className="hover:text-green-600 hover:transition-all">
+        Новости
+      </Link>
       <Link
         to="/genocide"
         className="hover:text-green-600 hover:transition-all"
