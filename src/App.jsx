@@ -1,25 +1,32 @@
+import React, { useEffect } from "react";
+
 import Patriot from "./components/Patriot";
-
 import Navbar from "./components/navbar";
-
+import Video from "./components/Video";
 import RightMenu from "./components/RightMenu";
-import AnimatedNumber from "./components/AnimatedNumber";
 import TimeLine from "./components/TimeLine";
 import BelarusMap from "./components/BelarusMap";
+import Footer from "./components/footer";
 
 function App() {
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   const scriptTwo = document.createElement("script");
+  //   script.src = "src/script/jquery.js";
+  //   scriptTwo.src = "src/script/uhpv-full.min.js";
+  //   document.body.appendChild(script);
+  //   document.body.appendChild(scriptTwo);
+  // }, []);
   return (
     <div className="App">
-      <Navbar />
       {/* <RightMenu /> */}
       <Patriot />
       {/* <BelarusMap /> */}
       {/* <TimeLine /> */}
-      <div className="flex justify-center gap-10 p-10">
-        <AnimatedNumber text="Мероприятий проведено" number={25} />
-        <AnimatedNumber text="Личных достижений" number={242} />
-        <AnimatedNumber text="Молодежные проекты" number={32} />
-      </div>
+
+      {/* <Video
+        src="https://drive.google.com/file/d/12_kr4AJBt4oA9jT3CSm2dJD5eApv9TxF/preview"
+      /> */}
     </div>
   );
 }

@@ -13,15 +13,28 @@ import Page7 from "./components/Patriot/pages/page7";
 import Genocide from "./components/genocide/Genocide";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+import Layout from "./layout";
+
 const router = createBrowserRouter([
   {
     path: "/annotation",
-    element: <Annotation />,
+    element: (
+      <Layout>
+        <Annotation />
+      </Layout>
+    ),
   },
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
+    errorElement: <ErrorPage />,
   },
+
   {
     path: "/newGeneration",
     element: <NewGeneration />,
@@ -56,7 +69,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/genocide",
-    element: <Genocide />,
+    element: (
+      <Layout>
+        <Genocide />
+      </Layout>
+    ),
   },
 ]);
 

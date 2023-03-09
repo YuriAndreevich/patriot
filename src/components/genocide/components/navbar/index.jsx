@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import SVG from "react-inlinesvg";
 import { useTranslation } from "react-i18next";
-import "../../i18next";
+import "../../../../i18next";
 import fonMP3 from "../../assets/mp3/fon.mp3";
 
 import "./navbar.scss";
