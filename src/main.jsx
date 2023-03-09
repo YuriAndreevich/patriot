@@ -11,6 +11,7 @@ import Page5 from "./components/Patriot/pages/page5";
 import Page6 from "./components/Patriot/pages/page6";
 import Page7 from "./components/Patriot/pages/page7";
 import Genocide from "./components/genocide/Genocide";
+import PhotoMuseum from "./components/PhotoMuseum";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
   {
     path: "/page7",
     element: <Page7 />,
+  },
+  {
+    path: "/photomuseum",
+    element: <PhotoMuseum />,
   },
   {
     path: "/genocide",

@@ -1,6 +1,6 @@
 import React from "react";
 
-import fon from "../../assets/video/fon.mp4";
+import fon from "../../../../assets/video/fon.mp4";
 
 import SVG from "react-inlinesvg";
 import waveSVG2 from "../../assets/img/waves2.svg";
@@ -37,7 +37,7 @@ function Main() {
           <source src={fon} type="video/mp4" />
         </video>
         <motion.p
-        style={{transform: 'translate(-50%, -115%)'}}
+          style={{ transform: "translate(-50%, -115%)" }}
           className="main-p"
           initial="hidden"
           variants={mainAnim}
