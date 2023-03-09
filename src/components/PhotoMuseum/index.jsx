@@ -1,8 +1,10 @@
 import React from "react";
+import data from "./data";
+import SwiperZoom from "../SwiperZoom";
 
 function index() {
   return (
-    <div>
+    <div className="container m-auto">
       МУЗЕЙ - «Беларуская хатка»
       <p>
         Первое помещение напоминает обычный деревенский дом. Тут – русская печь,
@@ -48,6 +50,7 @@ function index() {
         народа. Изучить быт и работу мастеров периода XIX – XX веков, на примере
         нашей «Беларускaй хаткi».
       </p>
+      <SwiperZoom data={data} />
     </div>
   );
 }

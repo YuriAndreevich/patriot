@@ -1,7 +1,6 @@
 import { Spinner } from "@chakra-ui/react";
 import React, { Suspense } from "react";
 
-import Navbar from "./components/navbar";
 import Divider from "./components/divider";
 
 import { ChakraProvider } from "@chakra-ui/react";
@@ -31,7 +30,6 @@ function Genocide() {
     <ChakraProvider>
       <Suspense fallback={<Spinner />}>
         <div className="App">
-          <Navbar />
           <Main />
           <AboutWe />
           <Divider wave={w1} rotate bottom="-1" />

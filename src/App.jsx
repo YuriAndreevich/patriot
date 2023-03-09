@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import Patriot from "./components/Patriot";
 import Navbar from "./components/navbar";
-import Video from "./components/Video";
+import Video from "./components/VideoPlayer";
 import RightMenu from "./components/RightMenu";
 import TimeLine from "./components/TimeLine";
 import BelarusMap from "./components/BelarusMap";

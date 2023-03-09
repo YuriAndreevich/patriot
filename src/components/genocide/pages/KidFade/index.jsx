@@ -27,7 +27,7 @@ import a6 from "../../assets/anatol/a6.jpg";
 
 
 
-import Modal from "../../components/modal";
+import Modal from "../../../modal";
 import { useTranslation } from 'react-i18next'
 
 import { motion } from "framer-motion";
