@@ -17,7 +17,7 @@ function Number({ n }) {
 
 function index({ number, text }) {
   return (
-    <div>
+    <div className="w-1/2 text-center">
       <Number n={number} />
       <p className="text-sm sm:text-xl">{text}</p>
     </div>

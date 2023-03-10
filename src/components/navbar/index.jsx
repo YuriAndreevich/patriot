@@ -34,7 +34,7 @@ function navbar() {
         to="/photomuseum"
         className="hover:text-green-600 hover:transition-all"
       >
-        Фотомузей «Беларуская хатка»
+        Фотолента музея «Беларуская хатка»
       </Link>
       <Link to="/games" className="hover:text-green-600 hover:transition-all">
         Игры

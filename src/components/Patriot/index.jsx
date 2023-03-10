@@ -39,8 +39,10 @@ function index() {
           <Link to="/newGeneration">мы - новое поколение!»</Link>
         </div>
         <div className="flex justify-center gap-10 p-10">
-          <AnimatedNumber text="Участники мероприятий" number={2695} />
-          <AnimatedNumber text="Наши достижения" number={374} />
+          <AnimatedNumber text="Участники мероприятий" number={4695} />
+          <AnimatedNumber text="Наши достижения" number={74} />
+          <AnimatedNumber text="Краеведческо-патриотические экспедиции" number={15} />
+          <AnimatedNumber text="Благоустроенные братские могилы и памятники" number={6} />
           <AnimatedNumber text="Молодежные проекты" number={15} />
         </div>
       </div>
