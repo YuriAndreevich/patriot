@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 function navbar() {
   return (
-    <nav className="fixed z-10 w-screen flex flex-wrap sm:flex-column item-center justify-center gap-10 px-2 py-5 bg-neutral-800">
+    <nav className="fixed z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-800">
+      
       <Link to="/" className="hover:text-green-600 hover:transition-all">
         Главная
       </Link>
@@ -22,7 +23,10 @@ function navbar() {
       <Link to="/map" className="hover:text-green-600 hover:transition-all">
         Маршруты выходного дня
       </Link>
-      <Link to="/photomuseum" className="hover:text-green-600 hover:transition-all">
+      <Link
+        to="/photomuseum"
+        className="hover:text-green-600 hover:transition-all"
+      >
         Фотомузей «Беларуская хатка»
       </Link>
       <Link to="/games" className="hover:text-green-600 hover:transition-all">

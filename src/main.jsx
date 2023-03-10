@@ -12,6 +12,7 @@ import Page6 from "./components/Patriot/pages/page6";
 import Page7 from "./components/Patriot/pages/page7";
 import Genocide from "./components/genocide/Genocide";
 import PhotoMuseum from "./components/PhotoMuseum";
+import Map from "./components/map";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
@@ -38,39 +39,85 @@ const router = createBrowserRouter([
 
   {
     path: "/newGeneration",
-    element: <NewGeneration />,
+
+    element: (
+      <Layout>
+        <NewGeneration />
+      </Layout>
+    ),
   },
   {
     path: "/page1",
-    element: <Page1 />,
+    element: (
+      <Layout>
+        <Page1 />
+      </Layout>
+    ),
   },
   {
     path: "/page2",
-    element: <Page2 />,
+    element: (
+      <Layout>
+        <Page2 />
+      </Layout>
+    ),
   },
   {
     path: "/page3",
-    element: <Page3 />,
+    element: (
+      <Layout>
+        <Page3 />
+      </Layout>
+    ),
   },
   {
     path: "/page4",
-    element: <Page4 />,
+    element: (
+      <Layout>
+        <Page4 />
+      </Layout>
+    ),
   },
   {
     path: "/page5",
-    element: <Page5 />,
+    element: (
+      <Layout>
+        <Page5 />
+      </Layout>
+    ),
   },
   {
     path: "/page6",
-    element: <Page6 />,
+    element: (
+      <Layout>
+        <Page6 />
+      </Layout>
+    ),
   },
   {
     path: "/page7",
-    element: <Page7 />,
+    element: (
+      <Layout>
+        <Page7 />
+      </Layout>
+    ),
   },
   {
     path: "/photomuseum",
-    element: <PhotoMuseum />,
+    element: (
+      <Layout>
+        {" "}
+        <PhotoMuseum />
+      </Layout>
+    ),
+  },
+  {
+    path: "/map",
+    element: (
+      <Layout>
+        <Map />
+      </Layout>
+    ),
   },
   {
     path: "/genocide",

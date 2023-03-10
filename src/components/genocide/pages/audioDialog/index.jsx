@@ -6,7 +6,7 @@ import "./audioDialog.scss";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-import Accordions from "../../components/accordion";
+import Accordions from "../../../accordion";
 
 import a1 from "../../assets/mp3/dialog/1.mp3";
 import a2 from "../../assets/mp3/dialog/2.mp3";
