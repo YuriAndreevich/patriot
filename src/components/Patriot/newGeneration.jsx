@@ -2,8 +2,8 @@ import React from "react";
 
 function newGeneration() {
   return (
-    <div className="WeNewPeople">
-      <div class="WeNewPeople-agl">
+    <div className="pt-24 px-10">
+      <div className="text-right">
         <p>«…И уже через мгновение уходящий год –</p>
         <p>Год исторической памяти –</p>
         <p>тоже станет частью прошлого, </p>
@@ -15,7 +15,7 @@ function newGeneration() {
         <p>каждого третьего только в последней войне.</p>
         <p>А.Г.Лукашенко</p>
       </div>
-      <div>
+      <div className="text-center">
         <p>Мы – новое поколение!</p>
         <p>Мы никогда не забудем</p>
         <p>ваших отважных лиц!</p>

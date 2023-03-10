@@ -27,7 +27,7 @@ function navbar() {
       <Link to="/map" className="hover:text-green-600 hover:transition-all">
         Поэтическая карта
       </Link>
-      <Link to="/map" className="hover:text-green-600 hover:transition-all">
+      <Link to="/weekend" className="hover:text-green-600 hover:transition-all">
         Маршруты выходного дня
       </Link>
       <Link
