@@ -38,7 +38,7 @@ function AboutWe() {
       className="aboutWe"
       id="aboutWe"
     >
-      <div className="aboutWe-content">
+      <div className="aboutWe-content text-black">
         <h1 id="h1">{t("О нашей работе")}</h1>
         <p id="p">
           {t(

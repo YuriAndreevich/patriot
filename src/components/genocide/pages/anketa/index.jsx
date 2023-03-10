@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { Button, Checkbox, Input } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-
 function Anketa() {
   const anketa = [
     {
@@ -52,14 +51,12 @@ function Anketa() {
 
   const { t } = useTranslation();
 
-  const [toSend, setToSend] = useState('')
+  const [toSend, setToSend] = useState("");
   const [answer, setAnswer] = useState([]);
 
   function Change(e) {
-
     setAnswer([...answer, toSend]);
   }
-
 
   const form = useRef();
   function sendEmail(e) {
@@ -95,35 +92,58 @@ function Anketa() {
     },
   };
 
-
   return (
     <div style={{ padding: "10px" }}>
       <motion.div
         initial="hidden"
         variants={mainAnim}
-        whileInView="visible" className="anketa" id="anketa">
-        <h1 id='h1'>{t('Анкета информированности по теме «Малолетние узники нацизма»')}</h1>
+        whileInView="visible"
+        className="anketa text-black"
+        id="anketa"
+      >
+        <h1 id="h1">
+          {t("Анкета информированности по теме «Малолетние узники нацизма»")}
+        </h1>
 
-        <p id='p'>
-          {t('С целью определения степени информированности современной молодежи, а также их отношения к бывшим малолетним узникам, учащиеся объединения «Гражданин нового века» предлагают Анкету информированности.')}
+        <p id="p">
+          {t(
+            "С целью определения степени информированности современной молодежи, а также их отношения к бывшим малолетним узникам, учащиеся объединения «Гражданин нового века» предлагают Анкету информированности."
+          )}
         </p>
-        <form ref={form} onSubmit={sendEmail}  >
+        <form ref={form} onSubmit={sendEmail}>
           {anketa.map((item, i) => (
-            <p id='p' key={i}>{t(`${item.question}`)}
+            <p id="p" key={i}>
+              {t(`${item.question}`)}
 
-              <p id='p'>{item.otvet.map((otvet, i) =>
-                <p id='p' key={i} > <Checkbox onChange={(e) => {
-                  setToSend(otvet)
-                  Change()
-                }}>{t(`${otvet}`)}</Checkbox></p>
-              )}</p>
+              <p id="p">
+                {item.otvet.map((otvet, i) => (
+                  <p id="p" key={i}>
+                    {" "}
+                    <Checkbox
+                      onChange={(e) => {
+                        setToSend(otvet);
+                        Change();
+                      }}
+                    >
+                      {t(`${otvet}`)}
+                    </Checkbox>
+                  </p>
+                ))}
+              </p>
             </p>
           ))}
-          <Button colorScheme='blackAlpha' type="submit" > {t('Отправить')}</Button>
-          <div style={{ display: 'none' }}>{answer.map((answer, i) => <Input name={`o${i}`} value={answer} />)}</div>
+          <Button colorScheme="blackAlpha" type="submit">
+            {" "}
+            {t("Отправить")}
+          </Button>
+          <div style={{ display: "none" }}>
+            {answer.map((answer, i) => (
+              <Input name={`o${i}`} value={answer} />
+            ))}
+          </div>
         </form>
       </motion.div>
-    </div >
+    </div>
   );
 }
 

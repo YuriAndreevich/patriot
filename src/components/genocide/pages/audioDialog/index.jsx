@@ -58,7 +58,7 @@ function AudioDialog() {
   return (
     <div className="audioDialog" id="audioDialog">
       <motion.div
-        className="audioDialog-content"
+        className="audioDialog-content text-black"
         initial="hidden"
         variants={mainAnim}
         whileInView="visible"

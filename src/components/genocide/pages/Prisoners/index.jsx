@@ -19,21 +19,24 @@ function Prisoners() {
     hidden: {
       x: -200,
       opacity: 0,
-
     },
     visible: {
       x: 0,
       opacity: 1,
       transition: {
         ease: "easeIn",
-        duration: 1.2
-      }
-    }
-    
-  }
+        duration: 1.2,
+      },
+    },
+  };
 
   return (
-    <motion.div initial="hidden" whileInView="visible" id="prisoners" variants={mainAnim}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      id="prisoners"
+      variants={mainAnim}
+    >
       <svg class="arrows">
         <path class="a1" d="M0 0 L30 32 L60 0"></path>
         <path class="a2" d="M0 20 L30 52 L60 20"></path>
@@ -53,6 +56,7 @@ function Prisoners() {
           margin: "0 auto",
           boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
         }}
+        className="text-black"
       >
         <img src={prisonersBook} className="prisoners-book-cover" alt="" />
 
