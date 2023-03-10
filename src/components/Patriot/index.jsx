@@ -8,7 +8,7 @@ import "./shyne.scss";
 function index() {
   return (
     <div className="relative">
-      <video autoPlay loop className="w-screen h-screen object-cover">
+      <video autoPlay muted loop className="w-screen h-screen object-cover">
         <source src={fon} type="video/mp4" />
       </video>
       <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-black to-0 w-screen top-3/4">
@@ -41,14 +41,8 @@ function index() {
         <div className="flex justify-center gap-10 p-10">
           <AnimatedNumber text="Участники мероприятий" number={4695} />
           <AnimatedNumber text="Наши достижения" number={74} />
-          <AnimatedNumber
-            text="Краеведческо-патриотические экспедиции"
-            number={15}
-          />
-          <AnimatedNumber
-            text="Благоустроенные братские могилы и памятники"
-            number={6}
-          />
+          <AnimatedNumber text="Краеведческо-патриотические экспедиции" number={15} />
+          <AnimatedNumber text="Благоустроенные братские могилы и памятники" number={6} />
           <AnimatedNumber text="Молодежные проекты" number={15} />
         </div>
       </div>

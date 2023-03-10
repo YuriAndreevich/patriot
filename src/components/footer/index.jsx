@@ -1,23 +1,21 @@
-import Button from "../Button";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function index() {
   return (
-    <div className=" flex justify-between p-3  m-auto bg-neutral-800 w-screen">
-      <div className="flex flex-col">
-        <Link to="">Патриот</Link>
-        <Link to="">Новости</Link>
-        <Link to="">Незаживающие раны памяти</Link>
-        <Link to="">Поэтическая карта</Link>
-        <Link to="">Маршруты выходного дня</Link>
-        <Link to="/photomuseum">Фотомузей «Беларуская хатка»</Link>
-        <Link to="/games">Игры</Link>
+    <div className=" flex justify-between p-3 w-8/12 m-auto">
+      <div className="">
+        <p>Патриот</p>
+        <p>Новости</p>
+        <p>Незаживающие раны памяти</p>
+        <p>Поэтическая карта</p>
+        <p>Маршруты выходного дня</p>
+        <p>Фотомузей «Беларуская хатка»</p>
+        <p>Игры</p>
       </div>
       <div className="flex flex-col">
         Обратная связь
         <input />
-        <Button>Отправить</Button>
+        <button>Отправить</button>
       </div>
 
       <a
