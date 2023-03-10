@@ -4,7 +4,7 @@ import SwiperZoom from "../SwiperZoom";
 
 function index() {
   return (
-    <div className="container m-auto">
+    <div className="container m-auto pt-36">
       МУЗЕЙ - «Беларуская хатка»
       <p>
         Первое помещение напоминает обычный деревенский дом. Тут – русская печь,

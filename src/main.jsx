@@ -12,6 +12,9 @@ import Page6 from "./components/Patriot/pages/page6";
 import Page7 from "./components/Patriot/pages/page7";
 import Genocide from "./components/genocide/Genocide";
 import PhotoMuseum from "./components/PhotoMuseum";
+import Weekend from "./components/weekend";
+import Games from "./components/games";
+import News from "./components/news";
 import Map from "./components/map";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -21,11 +24,7 @@ import Layout from "./layout";
 const router = createBrowserRouter([
   {
     path: "/annotation",
-    element: (
-      <Layout>
-        <Annotation />
-      </Layout>
-    ),
+    element: <Annotation />,
   },
   {
     path: "/",
@@ -106,7 +105,6 @@ const router = createBrowserRouter([
     path: "/photomuseum",
     element: (
       <Layout>
-        {" "}
         <PhotoMuseum />
       </Layout>
     ),
@@ -124,6 +122,30 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Genocide />
+      </Layout>
+    ),
+  },
+  {
+    path: "/games",
+    element: (
+      <Layout>
+        <Games />
+      </Layout>
+    ),
+  },
+  {
+    path: "/news",
+    element: (
+      <Layout>
+        <News />
+      </Layout>
+    ),
+  },
+  {
+    path: "/weekend",
+    element: (
+      <Layout>
+        <Weekend />
       </Layout>
     ),
   },
