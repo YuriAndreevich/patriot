@@ -2,7 +2,7 @@ import React from "react";
 
 function page1() {
   return (
-    <div className="p-content">
+    <div className="container py-20 m-auto">
       <p className="p-content-title">ТВОРЧЕСТВО</p>
       <p className="p-content-stix">Мы - новое поколение,</p>
       <p className="p-content-stix"> Мы прорубаем свое течение!</p>

@@ -3,7 +3,7 @@ import React from "react";
 function page1() {
   return (
     <div>
-      <div className="p-content">
+      <div className="container py-20 m-auto">
         <p className="p-content-title">ПАМЯТЬ</p>
         <p className="p-content-stix">Мы – новое поколение!</p>
         <p className="p-content-stix">Мы никогда не забудем</p>

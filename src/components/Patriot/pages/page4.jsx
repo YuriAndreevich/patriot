@@ -2,7 +2,7 @@ import React from "react";
 
 function page1() {
   return (
-    <div className="p-content">
+    <div className="container py-20 m-auto">
       <p
         style={{
           color: "#782304",

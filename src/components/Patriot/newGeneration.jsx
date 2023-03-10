@@ -2,7 +2,7 @@ import React from "react";
 
 function newGeneration() {
   return (
-    <div className="WeNewPeople">
+    <div className="container py-20 m-auto">
       <div class="WeNewPeople-agl">
         <p>«…И уже через мгновение уходящий год –</p>
         <p>Год исторической памяти –</p>

@@ -11,7 +11,7 @@ function navbar() {
   const [activeLang, setActiveLang] = useState(2);
 
   return (
-    <nav className="fixed z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-800">
+    <nav className="fixed z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-900">
       <Link to="/" className="hover:text-green-600 hover:transition-all">
         Главная
       </Link>
@@ -27,7 +27,7 @@ function navbar() {
       <Link to="/map" className="hover:text-green-600 hover:transition-all">
         Поэтическая карта
       </Link>
-      <Link to="/map" className="hover:text-green-600 hover:transition-all">
+      <Link to="/weekend" className="hover:text-green-600 hover:transition-all">
         Маршруты выходного дня
       </Link>
       <Link

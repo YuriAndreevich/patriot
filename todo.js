@@ -8,3 +8,6 @@
 //https://reactjsexample.com/classic-card-game-flip-the-cards-and-match-done-in-vanilla-javascript-svelte-vue-react card game patriot
 // игра 2 место бнту что где когда отвечает учищийся
 //https://codepen.io/specialorange/project/editor/DBRddB# кнопки стоп пауза на главной
+
+
+//className="container py-20 m-auto" content

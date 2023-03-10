@@ -1,35 +1,68 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button";
 
 function index() {
   return (
-    <div className=" flex justify-between p-3 w-8/12 m-auto">
-      <div className="">
-        <p>Патриот</p>
-        <p>Новости</p>
-        <p>Незаживающие раны памяти</p>
-        <p>Поэтическая карта</p>
-        <p>Маршруты выходного дня</p>
-        <p>Фотомузей «Беларуская хатка»</p>
-        <p>Игры</p>
-      </div>
-      <div className="flex flex-col">
-        Обратная связь
-        <input />
-        <button>Отправить</button>
-      </div>
+    <div className="  w-screen  bg-neutral-900">
+      <div className="w-2/3 flex justify-between p-3 m-auto items-center">
+        <div className=" flex flex-col ">
+          <Link to="/" className="hover:text-green-600 hover:transition-all">
+            Главная
+          </Link>
+          <Link
+            to="/news"
+            className="hover:text-green-600 hover:transition-all"
+          >
+            Новости
+          </Link>
+          <Link
+            to="/genocide"
+            className="hover:text-green-600 hover:transition-all"
+          >
+            Незаживающие раны памяти
+          </Link>
+          <Link to="/map" className="hover:text-green-600 hover:transition-all">
+            Поэтическая карта
+          </Link>
+          <Link
+            to="/weekend"
+            className="hover:text-green-600 hover:transition-all"
+          >
+            Маршруты выходного дня
+          </Link>
+          <Link
+            to="/photomuseum"
+            className="hover:text-green-600 hover:transition-all"
+          >
+            Фотолента музея «Беларуская хатка»
+          </Link>
+          <Link
+            to="/games"
+            className="hover:text-green-600 hover:transition-all"
+          >
+            Игры
+          </Link>
+        </div>
+        <div className="flex flex-col gap-y-2">
+          Обратная связь
+          <input />
+          <Button>Отправить</Button>
+        </div>
 
-      <a
-        href="https://github.com/YuriAndreevich"
-        target="_blank"
-        rel="noreferrer"
-        className="flex"
-      >
-        <img
-          className="h-12 content-center "
-          src="https://preview.colorlib.com/theme/stellar/images/clients/icon-github.svg"
-          alt="GitHub"
-        />
-      </a>
+        <a
+          href="https://github.com/YuriAndreevich"
+          target="_blank"
+          rel="noreferrer"
+          className="flex"
+        >
+          <img
+            className="h-12 content-center "
+            src="https://preview.colorlib.com/theme/stellar/images/clients/icon-github.svg"
+            alt="GitHub"
+          />
+        </a>
+      </div>
     </div>
   );
 }
