@@ -12,3 +12,4 @@
 //https://codepen.io/YuriAndreevich/pen/OJozEGB random picker
 
 //className="container py-20 m-auto" content
+//https://flowbite.com/docs/components/modal/ tailwind bautiful 

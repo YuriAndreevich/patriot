@@ -8,20 +8,20 @@ import { motion } from "framer-motion";
 
 import Accordions from "../../../accordion";
 
-import a1 from "../../assets/mp3/dialog/1.mp3";
-import a2 from "../../assets/mp3/dialog/2.mp3";
-import a3 from "../../assets/mp3/dialog/3.mp3";
-import a4 from "../../assets/mp3/dialog/4.mp3";
-import a5 from "../../assets/mp3/dialog/5.mp3";
-import a6 from "../../assets/mp3/dialog/6.mp3";
-import a7 from "../../assets/mp3/dialog/7.mp3";
-import a8 from "../../assets/mp3/dialog/8.mp3";
-import a9 from "../../assets/mp3/dialog/9.mp3";
-import a10 from "../../assets/mp3/dialog/10.mp3";
-import a11 from "../../assets/mp3/dialog/11.mp3";
-import a12 from "../../assets/mp3/dialog/12.mp3";
-import a14 from "../../assets/mp3/dialog/14.mp3";
-import a15 from "../../assets/mp3/dialog/15.mp3";
+import a1 from "../../../../assets/genocide/mp3/dialog/1.mp3";
+import a2 from "../../../../assets/genocide/mp3/dialog/2.mp3";
+import a3 from "../../../../assets/genocide/mp3/dialog/3.mp3";
+import a4 from "../../../../assets/genocide/mp3/dialog/4.mp3";
+import a5 from "../../../../assets/genocide/mp3/dialog/5.mp3";
+import a6 from "../../../../assets/genocide/mp3/dialog/6.mp3";
+import a7 from "../../../../assets/genocide/mp3/dialog/7.mp3";
+import a8 from "../../../../assets/genocide/mp3/dialog/8.mp3";
+import a9 from "../../../../assets/genocide/mp3/dialog/9.mp3";
+import a10 from "../../../../assets/genocide/mp3/dialog/10.mp3";
+import a11 from "../../../../assets/genocide/mp3/dialog/11.mp3";
+import a12 from "../../../../assets/genocide/mp3/dialog/12.mp3";
+import a14 from "../../../../assets/genocide/mp3/dialog/14.mp3";
+import a15 from "../../../../assets/genocide/mp3/dialog/15.mp3";
 
 function AudioDialog() {
   const [audio1] = useState(new Audio(a1));

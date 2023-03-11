@@ -3,7 +3,7 @@ import React from "react";
 import fon from "../../../../assets/video/fon.mp4";
 
 import SVG from "react-inlinesvg";
-import waveSVG2 from "../../assets/img/waves2.svg";
+import waveSVG2 from "../../../../assets/genocide/img/waves2.svg";
 import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";

@@ -15,9 +15,9 @@ import WeNovopolock from "./pages/weNovopolock";
 import AboutWe from "./pages/aboutWe";
 import Genocid from "./pages/Genocide";
 
-import w1 from "./assets/img/waves1.svg";
-import w2 from "./assets/img/waves2.svg";
-import w4 from "./assets/img/waves4.svg";
+import w1 from "../../assets/genocide/img/waves1.svg";
+import w2 from "../../assets/genocide/img/waves2.svg";
+import w4 from "../../assets/genocide/img/waves4.svg";
 
 import "./app.scss";
 import AudioDialog from "./pages/audioDialog";

@@ -2,9 +2,9 @@ import React from "react";
 import "./Prisoners.scss";
 
 import HTMLFlipBook from "react-pageflip";
-import Prisonersjpg from "../../assets/img/Prisoners.jpg";
-import prisonersBook from "../../assets/img/prisonersBook.jpg";
-import prisonersBook2 from "../../assets/img/prisonersBook2.jpg";
+import Prisonersjpg from "../../../../assets/genocide/img/Prisoners.jpg";
+import prisonersBook from "../../../../assets/genocide/img/prisonersBook.jpg";
+import prisonersBook2 from "../../../../assets/genocide/img/prisonersBook2.jpg";
 
 import "swiper/scss";
 import "swiper/scss/pagination";

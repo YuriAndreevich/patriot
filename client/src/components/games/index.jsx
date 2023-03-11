@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function index() {
   return (
-    <div className="container py-20 m-auto flex flex-row gap-3 justify-center">
+    <div className="container h-5/6 py-20 m-auto flex flex-row gap-3 justify-center">
       <Link to="/games/quiz">
         <Card text="Викторина" />
       </Link>

@@ -1,8 +1,8 @@
 import React from "react";
 import "./weNovopolock.scss";
 
-import weNovopolockIMG1 from "../../assets/img/weNovopolock.jpg";
-import weNovopolockIMG2 from "../../assets/img/weNovopolock2.jpg";
+import weNovopolockIMG1 from "../../../../assets/genocide/img/weNovopolock.jpg";
+import weNovopolockIMG2 from "../../../../assets/genocide/img/weNovopolock2.jpg";
 import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";

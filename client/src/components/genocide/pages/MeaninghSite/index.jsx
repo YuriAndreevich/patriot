@@ -2,8 +2,8 @@ import React from "react";
 import "./MeaninghSite.scss";
 import { useTranslation } from "react-i18next";
 
-import IMG1 from "../../assets/img/MeaninghSite.jpg";
-import IMG2 from "../../assets/img/MeaninghSite2.jpg";
+import IMG1 from "../../../../assets/genocide/img/MeaninghSite.jpg";
+import IMG2 from "../../../../assets/genocide/img/MeaninghSite2.jpg";
 import { motion } from "framer-motion";
 
 function MeaninghSite() {

@@ -3,8 +3,8 @@ import React from "react";
 import "./Genocide.scss";
 import "../readMore.scss";
 
-import IMG1 from "../../assets/img/Genocide.jpg";
-import IMG2 from "../../assets/img/Genocide2.jpg";
+import IMG1 from "../../../../assets/genocide/img/Genocide.jpg";
+import IMG2 from "../../../../assets/genocide/img/Genocide2.jpg";
 
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";

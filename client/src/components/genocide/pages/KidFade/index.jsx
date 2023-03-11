@@ -2,28 +2,28 @@ import React from "react";
 import "./KidFade.scss";
 import { Divider, Center } from "@chakra-ui/react";
 
-import kidFadeFon from "../../assets/img/kidFadeFon.jpg";
+import kidFadeFon from "../../../../assets/genocide/img/kidFadeFon.jpg";
 
-import KidFade1 from "../../assets/img/KidFade1.jpg";
-import KidFade2 from "../../assets/img/KidFade2.jpg";
-import KidFade3 from "../../assets/img/KidFade3.jpg";
+import KidFade1 from "../../../../assets/genocide/img/KidFade1.jpg";
+import KidFade2 from "../../../../assets/genocide/img/KidFade2.jpg";
+import KidFade3 from "../../../../assets/genocide/img/KidFade3.jpg";
 
-import i1 from "../../assets/irina/1.jpg";
-import i2 from "../../assets/irina/2.jpg";
-import i3 from "../../assets/irina/3.jpg";
-import i4 from "../../assets/irina/4.jpg";
-import i5 from "../../assets/irina/5.jpg";
-import i6 from "../../assets/irina/6.jpg";
+import i1 from "../../../../assets/genocide/irina/1.jpg";
+import i2 from "../../../../assets/genocide/irina/2.jpg";
+import i3 from "../../../../assets/genocide/irina/3.jpg";
+import i4 from "../../../../assets/genocide/irina/4.jpg";
+import i5 from "../../../../assets/genocide/irina/5.jpg";
+import i6 from "../../../../assets/genocide/irina/6.jpg";
 
-import v1 from "../../assets/vladimir/v1.jpg";
-import v2 from "../../assets/vladimir/v2.jpg";
+import v1 from "../../../../assets/genocide/vladimir/v1.jpg";
+import v2 from "../../../../assets/genocide/vladimir/v2.jpg";
 
-import a1 from "../../assets/anatol/a1.jpg";
-import a2 from "../../assets/anatol/a2.jpg";
-import a3 from "../../assets/anatol/a3.jpg";
-import a4 from "../../assets/anatol/a4.jpg";
-import a5 from "../../assets/anatol/a5.jpg";
-import a6 from "../../assets/anatol/a6.jpg";
+import a1 from "../../../../assets/genocide/anatol/a1.jpg";
+import a2 from "../../../../assets/genocide/anatol/a2.jpg";
+import a3 from "../../../../assets/genocide/anatol/a3.jpg";
+import a4 from "../../../../assets/genocide/anatol/a4.jpg";
+import a5 from "../../../../assets/genocide/anatol/a5.jpg";
+import a6 from "../../../../assets/genocide/anatol/a6.jpg";
 
 import Modal from "../../../modal";
 import { useTranslation } from "react-i18next";
