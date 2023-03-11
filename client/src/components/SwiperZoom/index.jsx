@@ -34,7 +34,7 @@ export default function App({ data }) {
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 5000,
+          delay: 15000,
           disableOnInteraction: false,
         }}
         modules={[Zoom, Navigation, Pagination, Autoplay]}
