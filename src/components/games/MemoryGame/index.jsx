@@ -105,7 +105,7 @@ class MemoryGame extends React.Component {
   }
   render() {
     return (
-      <div className="MemoryGame">
+      <div className="MemoryGame container py-20 m-auto">
         <div className="playground">
           {this.state.finalizedFrameworks.map((framework, index) => {
             return (

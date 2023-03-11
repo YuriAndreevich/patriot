@@ -20,6 +20,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Layout from "./layout";
+import MemoryGame from "./components/games/MemoryGame";
+import Quiz from "./components/games/quiz";
 
 const router = createBrowserRouter([
   {
@@ -130,6 +132,22 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Games />
+      </Layout>
+    ),
+  },
+  {
+    path: "/games/memorygame",
+    element: (
+      <Layout>
+        <MemoryGame />
+      </Layout>
+    ),
+  },
+  {
+    path: "/games/quiz",
+    element: (
+      <Layout>
+        <Quiz />
       </Layout>
     ),
   },

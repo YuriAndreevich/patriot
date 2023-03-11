@@ -9,5 +9,6 @@
 // игра 2 место бнту что где когда отвечает учищийся
 //https://codepen.io/specialorange/project/editor/DBRddB# кнопки стоп пауза на главной
 
+//https://codepen.io/YuriAndreevich/pen/OJozEGB random picker
 
 //className="container py-20 m-auto" content
