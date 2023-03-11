@@ -15,7 +15,8 @@ import { useTranslation } from "react-i18next";
 import "../../i18next";
 import fonMP3 from "../../assets/genocide/mp3/fon.mp3";
 
-import soundSVG from "../../assets/svg/soundM.svg";
+import soundSVGM from "../../assets/svg/soundM.svg";
+import soundSVGP from "../../assets/svg/soundP.svg";
 
 function Navbar() {
   const [audio] = useState(new Audio(fonMP3));
@@ -89,15 +90,15 @@ function Navbar() {
         </div>
         {play ? (
           <SVG
-            className="navbar-menu-help-sound"
-            src={soundSVG}
+            className="h-8"
+            src={soundSVGM}
             alt=""
             onClick={handleStartAudio}
           />
         ) : (
           <SVG
-            className="navbar-menu-help-sound"
-            src={soundSVG}
+            className="h-8"
+            src={soundSVGP}
             alt=""
             onClick={handleStopAudio}
           />
@@ -194,14 +195,14 @@ function Navbar() {
                 {play ? (
                   <SVG
                     className="navbar-menu-help-sound black"
-                    src={soundSVG}
+                    src={soundSVGM}
                     alt=""
                     onClick={handleStartAudio}
                   />
                 ) : (
                   <SVG
                     className="navbar-menu-help-sound black"
-                    src={soundSVG}
+                    src={soundSVGP}
                     alt=""
                     onClick={handleStopAudio}
                   />

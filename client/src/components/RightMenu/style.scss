@@ -1,6 +1,7 @@
 $green: #1FA475;
 .rm-wrapper{
   position: fixed;
+  z-index: 300;
   top: 0;
   left: 0;
   height: 100%;
@@ -14,10 +15,13 @@ $green: #1FA475;
   transition: all 0.3s ease-in-out;
 }
 #active:checked ~ .rm-wrapper{
+  z-index: 300;
+
   clip-path: circle(75%);
 }
 .menu-btn{
   position: absolute;
+  position: fixed;
   z-index: 2;
   right: 20px;
   /* left: 20px; */
@@ -92,6 +96,8 @@ input[type="checkbox"]{
   display: none;
 }
 .rm-content{
+  z-index: 300;
+
   position: absolute;
   top: 50%;
   left: 50%;

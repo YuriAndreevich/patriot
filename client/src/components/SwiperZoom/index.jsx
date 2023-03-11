@@ -13,7 +13,7 @@ import { Zoom, Navigation, Pagination } from "swiper";
 
 export default function App({ data }) {
   return (
-    <>
+    <div className="h-96">
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -24,17 +24,21 @@ export default function App({ data }) {
         pagination={{
           clickable: true,
         }}
+        slidesPerView={3}
+        spaceBetween={30}
+        autoplay
+        loop={true}
         modules={[Zoom, Navigation, Pagination]}
         className="mySwiper"
       >
         {data.map((src, i) => (
           <SwiperSlide key={i}>
-            <div className="swiper-zoom-container">
-              <img src={src.src} />
+            <div className="swiper-zoom-container ">
+              <img style={{ objectFit: "cover" }} src={src.src} />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
