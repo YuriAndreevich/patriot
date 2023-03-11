@@ -1,16 +1,13 @@
 import React from "react";
 import data from "./data";
 import SwiperZoom from "../SwiperZoom";
-import lenta from "../../assets/img/PhotoMuseum/lenta.png";
+import lenta from "../../assets/img/PhotoMuseum/lenta.avif";
 
 function index() {
   return (
-    <div
-      className="bg-no-repeat bg-cover"
-      style={{ backgroundImage: `url(${lenta})` }}
-    >
-      <div className="container py-20 m-auto ">
-        <h1 className="text-center font-bold mb-3">
+    <div className=" p-20 sm:p-10" style={{ backgroundImage: `url(${lenta})` }}>
+      <div className="container py-20 m-auto   bg-neutral-900 p-5 rounded-2xl">
+        <h1 className="text-center font-bold mb-3 ">
           МУЗЕЙ - «Беларуская хатка»
         </h1>
         <p className="indent-2.5 mb-3">
