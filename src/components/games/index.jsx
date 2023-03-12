@@ -1,6 +1,6 @@
 import React from "react";
 import MemoryGame from "./MemoryGame";
-import Card from "./Card";
+import Card from "../Card";
 import { Link } from "react-router-dom";
 
 function index() {
