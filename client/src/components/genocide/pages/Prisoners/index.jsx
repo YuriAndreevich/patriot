@@ -5,6 +5,7 @@ import HTMLFlipBook from "react-pageflip";
 import Prisonersjpg from "../../../../assets/genocide/img/Prisoners.jpg";
 import prisonersBook from "../../../../assets/genocide/img/prisonersBook.jpg";
 import prisonersBook2 from "../../../../assets/genocide/img/prisonersBook2.jpg";
+import Book from "../../../../assets/genocide/img/book.jpg";
 
 import "swiper/scss";
 import "swiper/scss/pagination";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 import fon from "../../../../assets/video/fon.mp4";
 
@@ -8,9 +8,19 @@ import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
 
+import sp from "../../../../assets/svg/wsoundp.svg";
+import sm from "../../../../assets/svg/wsoundm.svg";
+import vp from "../../../../assets/svg/wvideop.svg";
+import vm from "../../../../assets/svg/wvideom.svg";
+
+import fonMP3 from "../../../../assets/genocide/mp3/fon.mp3";
+
 import "./main.scss";
 
 function Main() {
+  const [audio] = useState(new Audio(fonMP3));
+  audio.loop = true;
+
   const mainAnim = {
     hidden: {
       y: -300,
@@ -24,6 +34,23 @@ function Main() {
 
   const { t } = useTranslation();
 
+  const vidRef = useRef(null);
+
+  const [play, setPlay] = useState(true);
+  const [sound, setSound] = useState(false);
+  const handleStartAudio = () => {
+    audio.pause();
+    setSound(true);
+  };
+  const handleStartVideo = () => {
+    setPlay(!play);
+    if (play) {
+      vidRef.current.play();
+    } else {
+      vidRef.current.pause();
+    }
+  };
+
   return (
     <>
       <div className="page1" id="main">
@@ -31,11 +58,46 @@ function Main() {
           autoPlay
           muted
           loop
+          ref={vidRef}
           className="page1-video"
           style={{ maxWidth: "none" }}
         >
           <source src={fon} type="video/mp4" />
         </video>
+        <div className="absolute right-24 bottom-64">
+          <div className="flex flex-row-reverse">
+            {sound ? (
+              <img
+                className=" relative h-16 w-16 z-50"
+                src={sp}
+                alt=""
+                onClick={handleStartAudio}
+              />
+            ) : (
+              <img
+                className=" relative h-16 w-16 z-50"
+                src={sm}
+                alt=""
+                onClick={handleStartAudio}
+              />
+            )}
+            {sound ? (
+              <img
+                className=" relative h-16 w-16 z-50 ml-2"
+                src={vp}
+                alt=""
+                onClick={handleStartVideo}
+              />
+            ) : (
+              <img
+                className=" relative h-16 w-16 z-50"
+                src={vm}
+                alt=""
+                onClick={handleStartVideo}
+              />
+            )}
+          </div>
+        </div>
         <motion.p
           style={{ transform: "translate(-50%, -115%)" }}
           className="main-p"

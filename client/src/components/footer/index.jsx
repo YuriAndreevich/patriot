@@ -46,6 +46,9 @@ function index() {
         </div>
         <div className="flex flex-col gap-y-2">
           Обратная связь
+          <span>Почта </span>
+          <input />
+          Сообщение
           <input />
           <Button>Отправить</Button>
         </div>
@@ -54,7 +57,7 @@ function index() {
           href="https://github.com/YuriAndreevich"
           target="_blank"
           rel="noreferrer"
-          className="flex"
+          className="лflex"
         >
           <img
             className="h-12 content-center "
