@@ -22,6 +22,7 @@ import ErrorPage from "./components/ErrorPage";
 import Layout from "./layout";
 import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
+import Login from "./components/auth";
 
 const router = createBrowserRouter([
   {
@@ -140,6 +141,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <MemoryGame />
+      </Layout>
+    ),
+  },
+  {
+    path: "/login",
+    element: (
+      <Layout>
+        <Login />
       </Layout>
     ),
   },
