@@ -1,14 +1,22 @@
 import { Heading } from "@chakra-ui/react";
+import { hex3 } from "@react-spring/shared";
 import React from "react";
 import SwiperZoom from "../SwiperZoom";
 import { data, data2, data3 } from "./data";
+import img from "../../assets/weekend/fon.jpg";
 
 function index() {
   return (
-    <div className="container py-20 m-auto">
-      <SwiperZoom data={data} h="5/6" w="20" />
-      <SwiperZoom data={data2} h="5/6" w="20" />
-      <SwiperZoom data={data3} h="5/6" w="20" />
+    <div>
+      <div
+        className="blur-sm z-0 h-screen w-screen fixed "
+        style={{ backgroundImage: `url('${img}')` }}
+      ></div>
+      <div className="container py-20 m-auto z-10 flex flex-col gap-10">
+        <SwiperZoom data={data} style={{ height: "842px", width: "595px" }} />
+        <SwiperZoom data={data2} style={{ height: "842px", width: "595px" }} />
+        <SwiperZoom data={data3} style={{ height: "842px", width: "595px" }} />
+      </div>
     </div>
   );
 }

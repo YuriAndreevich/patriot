@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Zoom, Navigation, Pagination, Autoplay } from "swiper";
 
-export default function App({ data, h, w, preview }) {
+export default function App({ data, style, preview }) {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -19,7 +19,7 @@ export default function App({ data, h, w, preview }) {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className={`h-${h} w-${w}`}>
+    <div style={style}>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
