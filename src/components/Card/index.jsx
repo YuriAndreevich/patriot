@@ -1,22 +1,21 @@
 import React from "react";
 import "./cars.scss";
-import img from "../../assets/games/1.png";
 function index({ text, src }) {
   const mystyle = {
-    backgroundImage: url(
-      "https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-    ),
+    backgroundImage: `url(
+      "${src}"
+    )`,
   };
 
   return (
-    <article class="Ccard Ccard--2 w-64 mystyle ">
-      <div class="Ccard__info-hover"></div>
-      <div class="Ccard__img"></div>
-      <a href="#" class="Ccard_link">
-        <div class="Ccard__img--hover"></div>
+    <article className="Ccard Ccard--2 w-64">
+      <div className="Ccard__info-hover"></div>
+      <div className="Ccard__img" style={mystyle}></div>
+      <a href="#" className="Ccard_link">
+        <div className="Ccard__img--hover" style={mystyle}></div>
       </a>
-      <div class="Ccard__info bg-neutral-900">
-        <h3 class="Ccard__title">{text}</h3>
+      <div className="Ccard__info bg-neutral-900">
+        <h3 className="Ccard__title">{text}</h3>
       </div>
     </article>
   );

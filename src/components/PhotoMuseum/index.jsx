@@ -55,7 +55,7 @@ function index() {
           народа. Изучить быт и работу мастеров периода XIX – XX веков, на
           примере нашей «Беларускaй хаткi».
         </p>
-        <SwiperZoom data={data} />
+        <SwiperZoom data={data} h="96" preview={3} />
       </div>
     </div>
   );
