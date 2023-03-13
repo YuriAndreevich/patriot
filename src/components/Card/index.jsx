@@ -1,18 +1,17 @@
 import React from "react";
-
-
+import "./cars.scss";
 function index({ text, src }) {
   return (
-    <div className="relative max-w-xs rounded-2xl overflow-hidden shadow-lg max-h-96 bg-neutral-900">
-      <img
-        className=" hover:blur-sm transition-all"
-        src={src}
-        alt="Sunset in the mountains "
-      />
-      <div className=" absolute font-bold text-xl  text-center text-green-600 p-4">
-        {text}
+    <article class="card card--2 w-64 ">
+      <div class="card__info-hover"></div>
+      <div class="card__img"></div>
+      <a href="#" class="card_link">
+        <div class="card__img--hover"></div>
+      </a>
+      <div class="card__info bg-neutral-900">
+        <h3 class="card__title">Discover the sea</h3>
       </div>
-    </div>
+    </article>
   );
 }
 

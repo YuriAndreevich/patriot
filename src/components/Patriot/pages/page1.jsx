@@ -2,6 +2,7 @@ import React from "react";
 import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent/ModalComponent";
 import Card from "@/components/Card";
+import "../shyne.scss";
 
 function page1() {
   return (
@@ -11,22 +12,24 @@ function page1() {
           <source src={fon} type="video/mp4" />
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
-          <div className=" absolute container p-20 m-auto">
-            <p className="font-bold text-2xl mb-2">ПАМЯТЬ</p>
+          <div className=" absolute container sm:p-20  p-10 m-auto ">
+            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">ПАМЯТЬ</p>
             <p className="">Мы – новое поколение!</p>
             <p className="">Мы никогда не забудем</p>
             <p className="mb-2">ваших отважных лиц!</p>
-            <p className="">
+            <p className="mb-2">
               Воспитание уважения к ратному подвигу белорусского народа в годы
-              самой страшной войны в истории человечества – Великой
-              Отечественной.
+              <p>
+                самой страшной войны в истории человечества – Великой
+                Отечественной.
+              </p>
             </p>
-            <p className="">
+            <p className="mb-10">
               «ПАМЯТЬ» представляет собой блок мероприятий, посвященных Великой
               Победе.
             </p>
 
-            <div className="flex flex-row gap-10">
+            <div className="flex flex-row gap-10 ">
               <Card text="Видео-посвящение «Прадеды, деды – солдаты Победы»" />
               <Card text="Видео-эстафета «Солдатский подвиг поэтической строкой»" />
               <Card text="Эстафета поколений «Мир в наследство»" />

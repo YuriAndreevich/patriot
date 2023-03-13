@@ -16,17 +16,19 @@ function index() {
   const [sound, setSound] = useState(false);
   const handleStartAudio = () => {
     setSound(!sound);
-    if (sound) {
+    if (sound == true) {
       vidRef.current.muted = false;
-    } else {
-      vidRef.current.muted = true;
+    } else if (sound == false) {
+      {
+        vidRef.current.muted = true;
+      }
     }
   };
   const handleStartVideo = () => {
     setPlay(!play);
-    if (play) {
+    if (play == true) {
       vidRef.current.play();
-    } else {
+    } else if (play == false) {
       vidRef.current.pause();
     }
   };
@@ -43,33 +45,33 @@ function index() {
       </video>
 
       <div className="absolute right-24 bottom-40">
-        <div className="flex flex-row-reverse">
-          {sound ? (
+        <div className="flex flex-row">
+          {play ? (
             <img
               className=" relative h-16 w-16 z-40"
-              src={sm}
+              src={vp}
               alt=""
               onClick={handleStartVideo}
             />
           ) : (
             <img
               className=" relative h-16 w-16 z-40"
-              src={sp}
+              src={vm}
               alt=""
               onClick={handleStartVideo}
             />
           )}
           {sound ? (
             <img
-              className=" relative h-16 w-16 z-40 ml-2"
-              src={vp}
+              className=" relative h-16 w-16 z-40"
+              src={sm}
               alt=""
               onClick={handleStartAudio}
             />
           ) : (
             <img
-              className=" relative h-16 w-16 z-40"
-              src={vm}
+              className=" relative h-16 w-16 z-40 ml-2"
+              src={sp}
               alt=""
               onClick={handleStartAudio}
             />

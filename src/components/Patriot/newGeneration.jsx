@@ -8,8 +8,8 @@ function newGeneration() {
         <source src={fon} type="video/mp4" />
       </video>
       <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
-        <div className="container py-20 m-auto">
-          <div class="text-right">
+        <div className=" py-20 m-auto">
+          <div class="text-right m-10">
             <p>«…И уже через мгновение уходящий год –</p>
             <p>Год исторической памяти –</p>
             <p>тоже станет частью прошлого, </p>
@@ -23,7 +23,7 @@ function newGeneration() {
             </p>
             <p>А.Г.Лукашенко</p>
           </div>
-          <div>
+          <div className="text-2xl p-10">
             <p>Мы – новое поколение!</p>
             <p>Мы никогда не забудем</p>
             <p>ваших отважных лиц!</p>
