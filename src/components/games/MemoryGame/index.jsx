@@ -143,7 +143,7 @@ class Card extends React.Component {
         }
         onClick={() => this.clicked(this.props.framework)}
       >
-        <div className="front">?</div>
+        <div className="front">П</div>
         <div className="back">
           <img
             src={

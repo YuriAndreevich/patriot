@@ -34,7 +34,7 @@
         font-size: 50px;
         line-height: 120px;
         cursor: pointer;
-        color: darken(#f4f5f7,20%);
+        color:  #16a34a;
         display:flex;
         align-items: center;
         justify-content: center;
@@ -50,6 +50,7 @@
         img {
           vertical-align: middle;
           width: 70%;
+          padding: 30px ;
         }
       }
       &.opened {
