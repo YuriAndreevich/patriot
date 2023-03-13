@@ -1,5 +1,5 @@
 import { Spinner } from "@chakra-ui/react";
-import React, { Suspense } from "react";
+import React, { useEffect } from "react";
 
 import Divider from "../divider";
 
@@ -24,11 +24,27 @@ import AudioDialog from "./pages/audioDialog";
 import Anketa from "./pages/anketa";
 
 //import Fullpage, {FullpageSection, FullpageSections} from '@ap.cx/react-fullpage'
+import Annotaion from "../Annotation";
 
 function Genocide() {
+  // useEffect(() => {
+  //   if (localStorage.getItem("showAnnotation") == "true") {
+  //     const box = document.getElementById("annotarion");
+  //     box.remove();
+  //   }
+  // }, [localStorage.getItem("showAnnotation")]);
   return (
     <ChakraProvider>
       <div className="App">
+        {localStorage.getItem("showAnnotation") == "true" ? null : (
+          <div
+            id="annotarion"
+            className="fixed z-50 h-screen w-screen overflow-x-hidden"
+          >
+            <Annotaion />
+          </div>
+        )}
+
         <Main />
         <AboutWe />
         <Divider wave={w1} rotate bottom="-1" />

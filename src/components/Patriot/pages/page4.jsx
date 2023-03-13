@@ -31,7 +31,7 @@ function page1() {
           name="1. Виртуальное краеведческое ориентирование «1160 лет городу Полоцку»"
           href=""
           data={data}
-        />{" "}
+        />
       </div>
       <div>
         <ModalComponent
@@ -40,7 +40,7 @@ function page1() {
         />
       </div>
       <div>
-        {" "}
+        
         <ModalComponent
           name="3. Буктрейлер к роману Т.Хаткевича «Песня Двины»"
           href="https://drive.google.com/file/d/1uouBiIvedoGWXA7XPySB-rIHR3KRoNuO/preview"

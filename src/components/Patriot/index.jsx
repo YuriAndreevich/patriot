@@ -2,10 +2,10 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import fon from "../../assets/video/mainvideo.mp4";
 import AnimatedNumber from "../AnimatedNumber";
-import sp from "../../assets/svg/wsoundp.svg";
-import sm from "../../assets/svg/wsoundm.svg";
-import vp from "../../assets/svg/wvideop.svg";
-import vm from "../../assets/svg/wvideom.svg";
+import sm from "../../assets/svg/wsoundpause.svg";
+import sp from "../../assets/svg/wsoundplay.svg";
+import vm from "../../assets/svg/wvideopause.svg";
+import vp from "../../assets/svg/wvideoplay.svg";
 
 import "./shyne.scss";
 
@@ -46,32 +46,32 @@ function index() {
         <div className="flex flex-row-reverse">
           {sound ? (
             <img
-              className=" relative h-16 w-16 z-50"
-              src={sp}
+              className=" relative h-16 w-16 z-40"
+              src={sm}
               alt=""
-              onClick={handleStartAudio}
+              onClick={handleStartVideo}
             />
           ) : (
             <img
-              className=" relative h-16 w-16 z-50"
-              src={sm}
+              className=" relative h-16 w-16 z-40"
+              src={sp}
               alt=""
-              onClick={handleStartAudio}
+              onClick={handleStartVideo}
             />
           )}
           {sound ? (
             <img
-              className=" relative h-16 w-16 z-50 ml-2"
+              className=" relative h-16 w-16 z-40 ml-2"
               src={vp}
               alt=""
-              onClick={handleStartVideo}
+              onClick={handleStartAudio}
             />
           ) : (
             <img
-              className=" relative h-16 w-16 z-50"
+              className=" relative h-16 w-16 z-40"
               src={vm}
               alt=""
-              onClick={handleStartVideo}
+              onClick={handleStartAudio}
             />
           )}
         </div>

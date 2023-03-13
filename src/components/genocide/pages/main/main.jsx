@@ -8,10 +8,10 @@ import { useTranslation } from "react-i18next";
 
 import { motion } from "framer-motion";
 
-import sp from "../../../../assets/svg/wsoundp.svg";
-import sm from "../../../../assets/svg/wsoundm.svg";
-import vp from "../../../../assets/svg/wvideop.svg";
-import vm from "../../../../assets/svg/wvideom.svg";
+import sp from "../../../../assets/svg/wsoundpause.svg";
+import sm from "../../../../assets/svg/wsoundplay.svg";
+import vp from "../../../../assets/svg/wvideopause.svg";
+import vm from "../../../../assets/svg/wvideoplay.svg";
 
 import fonMP3 from "../../../../assets/genocide/mp3/fon.mp3";
 

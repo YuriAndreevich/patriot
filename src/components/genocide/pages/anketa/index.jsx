@@ -118,7 +118,6 @@ function Anketa() {
               <p id="p">
                 {item.otvet.map((otvet, i) => (
                   <p id="p" key={i}>
-                    {" "}
                     <Checkbox
                       onChange={(e) => {
                         setToSend(otvet);
@@ -133,7 +132,6 @@ function Anketa() {
             </p>
           ))}
           <Button colorScheme="blackAlpha" type="submit">
-            {" "}
             {t("Отправить")}
           </Button>
           <div style={{ display: "none" }}>
