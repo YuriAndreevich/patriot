@@ -4,9 +4,11 @@ import Questions from "./Questions";
 
 function index() {
   return (
-    <div>
-      <Players />
-      <Questions />
+    <div className="container py-20 m-auto ">
+      <div className="flex justify-between">
+        <Players />
+        <Questions />
+      </div>
     </div>
   );
 }
