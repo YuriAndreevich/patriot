@@ -12,10 +12,10 @@ function page1() {
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
           <div className=" absolute container p-20 m-auto">
-            <p className="font-bold">ПАМЯТЬ</p>
+            <p className="font-bold text-2xl mb-2">ПАМЯТЬ</p>
             <p className="">Мы – новое поколение!</p>
             <p className="">Мы никогда не забудем</p>
-            <p className="">ваших отважных лиц!</p>
+            <p className="mb-2">ваших отважных лиц!</p>
             <p className="">
               Воспитание уважения к ратному подвигу белорусского народа в годы
               самой страшной войны в истории человечества – Великой
@@ -27,9 +27,9 @@ function page1() {
             </p>
 
             <div className="flex flex-row gap-10">
-              <Card />
-              <Card />
-              <Card />
+              <Card text="Видео-посвящение «Прадеды, деды – солдаты Победы»" />
+              <Card text="Видео-эстафета «Солдатский подвиг поэтической строкой»" />
+              <Card text="Эстафета поколений «Мир в наследство»" />
               {/* <ModalComponent
                 name="1. Видео-посвящение «Прадеды, деды – солдаты Победы»"
                 href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"

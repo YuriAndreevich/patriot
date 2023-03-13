@@ -1,8 +1,14 @@
 import React from "react";
-import Quiz from "./Quiz";
+import Players from "./Players";
+import Questions from "./Questions";
 
 function index() {
-  return <div><Quiz/></div>;
+  return (
+    <div>
+      <Players />
+      <Questions />
+    </div>
+  );
 }
 
 export default index;
