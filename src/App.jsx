@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getMe } from "./redux/features/auth/authSlice.js";
+import { useDispatch } from "react-redux";
 
 import Patriot from "./components/Patriot";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <Patriot />

@@ -1,51 +1,69 @@
 import React from "react";
+import fon from "../../../assets/video/mainvideo.mp4";
+import ModalComponent from "@/components/ModalComponent";
+import Card from "@/components/Card";
+import "../shyne.scss";
+import Р3 from "../../../assets/patriot/Р3.pdf";
+import img from "../../../assets/cards/1.png";
 
 function page1() {
   return (
-    <div className="container py-20 m-auto">
-      <p
-        style={{
-          color: "#782304",
-          textAlign: "center",
-          fontSize: "8.8rem",
-          padding: "30px",
-        }}
-      >
-        РОДИНА МАЛАЯ
-      </p>
-      <p className="p-content-stix">Мы – новое поколение!</p>
-      <p className="p-content-stix"> Мы будущего звено!</p>
+    <div>
+      <div className="relative ">
+        <video autoPlay muted loop className="w-screen h-screen object-cover">
+          <source src={fon} type="video/mp4" />
+        </video>
+        <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
+          <div className=" absolute container sm:p-20  p-10 m-auto ">
+            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">
+              РОДИНА МАЛАЯ
+            </p>
+            <p className="text-2xl">Мы – новое поколение!</p>
+            <p className="text-2xl mb-2">Мы будущего звено!</p>
+            <p className="mb-2 text-xl">
+              Воспитание уважения к ратному подвигу белорусского народа в годы
+              <p className="text-xl">
+                самой страшной войны в истории человечества – Великой
+                Отечественной.
+              </p>
+            </p>
+            <p className="mb-10 text-xl">
+              «ПАМЯТЬ» представляет собой блок мероприятий, посвященных Великой
+              Победе.
+            </p>
 
-      <p className="p-content-italic">
-        Развивать потребности в познании культурно-исторических ценностей
-        региона – Полоцкой земли; поисково-исследовательская деятельность.
-      </p>
-      <p className="p-content-meop">
-        «РОДИНА МАЛАЯ» - мероприятия блока дают возможность знакомиться с
-        легендарной историей Полоцкой земли, где формировалась белорусская
-        государственность, белорусская история и культура, белорусская
-        духовность.
-      </p>
-      {/* <div>
-        <ModalSwiper
-          name="1. Виртуальное краеведческое ориентирование «1160 лет городу Полоцку»"
-          href=""
-          data={data}
-        />
+            <div className="flex flex-row gap-10 ">
+              <ModalComponent
+                name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
+                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
+              >
+                <Card
+                  src={img}
+                  text="Видео-посвящение «Прадеды, деды – солдаты Победы»"
+                />
+              </ModalComponent>
+              <ModalComponent
+                name=" Видео-эстафета «Солдатский подвиг поэтической строкой»"
+                href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
+              >
+                <Card
+                  src={img}
+                  text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
+                />
+              </ModalComponent>
+              <ModalComponent
+                name="Эстафета поколений «Мир в наследство»"
+                href={Р3}
+              >
+                <Card
+                  src={img}
+                  text="Эстафета поколений «Мир в наследство»                       "
+                />
+              </ModalComponent>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <ModalComponent
-          name="2. Турнир знатоков «Тайны полоцкой истории»"
-          href={p2}
-        />
-      </div>
-      <div>
-        
-        <ModalComponent
-          name="3. Буктрейлер к роману Т.Хаткевича «Песня Двины»"
-          href="https://drive.google.com/file/d/1uouBiIvedoGWXA7XPySB-rIHR3KRoNuO/preview"
-        />
-      </div> */}
     </div>
   );
 }

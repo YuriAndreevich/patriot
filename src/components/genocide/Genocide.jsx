@@ -34,7 +34,6 @@ function Genocide() {
   //   }
   // }, [localStorage.getItem("showAnnotation")]);
   return (
-    <ChakraProvider>
       <div className="App">
         {localStorage.getItem("showAnnotation") == "true" ? null : (
           <div
@@ -66,7 +65,6 @@ function Genocide() {
         <Divider wave={w2} rotate bottom="-1" />
         <ContactMe />
       </div>
-    </ChakraProvider>
   );
 }
 

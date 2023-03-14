@@ -1,37 +1,48 @@
 import React from "react";
+import fon from "../../../assets/video/mainvideo.mp4";
+import ModalComponent from "@/components/ModalComponent";
+import Card from "@/components/Card";
+import "../shyne.scss";
+import img from "../../../assets/cards/1.png";
 
 function page1() {
   return (
-    <div className="container py-20 m-auto">
-      <p
-        style={{
-          color: "#782304",
-          textAlign: "center",
-          fontSize: "6rem",
-          padding: "30px",
-        }}
-      >
-        АКТИВНАЯ ЖИЗНЕННАЯ ПОЗИЦИЯ
-      </p>
-      <p className="p-content-stix">
-        <strong>Мы - новое поколение,</strong>
-      </p>
-      <p className="p-content-stix">
-        <strong> Мы выдвигаем свои решения!</strong>
-      </p>
+    <div>
+      <div className="relative ">
+        <video autoPlay muted loop className="w-screen h-screen object-cover">
+          <source src={fon} type="video/mp4" />
+        </video>
+        <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
+          <div className=" absolute container sm:p-20  p-10 m-auto ">
+            <p className="font-bold text-6xl sm:text-7xl mb-2 shyne">
+              АКТИВНАЯ ЖИЗНЕННАЯ ПОЗИЦИЯ
+            </p>
+            <p className="text-2xl">Мы - новое поколение,</p>
+            <p className="mb-2 text-2xl">Мы выдвигаем свои решения!</p>
+            <p className="mb-2 text-xl">
+              Формирование устойчивого интереса к явлениям окружающей жизни,
+              желание сделать окружающее пространство лучше.
+            </p>
+            <p className="mb-10 text-xl">
+              «АКТИВНАЯ ЖИЗНЕННАЯ ПОЗИЦИЯ» - мероприятия блока дают возможность
+              участникам проявить себя в различных социальных ролях.
+            </p>
 
-      <p className="p-content-italic">
-        Формирование устойчивого интереса к явлениям окружающей жизни, желание
-        сделать окружающее пространство лучше.
-      </p>
-      <p className="p-content-meop">
-        «АКТИВНАЯ ЖИЗНЕННАЯ ПОЗИЦИЯ» - мероприятия блока дают возможность
-        участникам проявить себя в различных социальных ролях.
-      </p>
 
-      {/* <div> <ModalComponent name='1. Сайт «Живая память прошлого»' href='http://genocide.sava.site/' /></div>
-    <div> <ModalComponent name='2. Ролик социальной направленности «Подари мечте крылья»' href='https://drive.google.com/file/d/1Ih_LiRwi5fsNAQGe0oVf_ZYXOi6NktKF/preview' /></div>
-    <div> <ModalComponent name='3. Разговор на равных «Опасности, подстерегающие современную молодежь»' href={A3} /></div> */}
+            <div className="flex flex-row gap-10 ">
+              <ModalComponent
+                name="Ролик социальной направленности «Подари мечте крылья»"
+                href="https://drive.google.com/file/d/1Ih_LiRwi5fsNAQGe0oVf_ZYXOi6NktKF/preview"
+              >
+                <Card
+                  src={img}
+                  text="Ролик социальной направленности «Подари мечте крылья»"
+                />
+              </ModalComponent>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

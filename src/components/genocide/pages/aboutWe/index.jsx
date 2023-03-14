@@ -6,7 +6,7 @@ import diagn from "../../../../assets/genocide/diagn.jpg";
 import img1 from "../../../../assets/genocide/img/aboutWe1.jpg";
 import img2 from "../../../../assets/genocide/img/aboutWe2.jpg";
 import img3 from "../../../../assets/genocide/img/aboutWe3.jpg";
-import ModalComponent from "../../../ModalComponent/ModalComponent";
+import ModalComponent from "../../../ModalComponent";
 
 import { motion } from "framer-motion";
 

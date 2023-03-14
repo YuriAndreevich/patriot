@@ -1,8 +1,10 @@
 import React from "react";
 import fon from "../../../assets/video/mainvideo.mp4";
-import MyModal from "@/components/MyModal";
+import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
+import Р3 from "../../../assets/patriot/Р3.pdf";
+import img from "../../../assets/cards/1.png";
 
 function page1() {
   return (
@@ -29,34 +31,37 @@ function page1() {
               Победе.
             </p>
 
+            {/* <div >
+
+              <div> */}
             <div className="flex flex-row gap-10 ">
-              <MyModal src="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview">
-                <Card text="Видео-посвящение «Прадеды, деды – солдаты Победы»" />
-              </MyModal>
-              <MyModal src="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview">
-                <Card text="Видео-эстафета «Солдатский подвиг поэтической строкой»" />
-              </MyModal>
-
-              <MyModal src="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview">
-                <Card text="Эстафета поколений «Мир в наследство»" />
-              </MyModal>
-
-              {/* <ModalComponent
-                name="1. Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
-              />
-            </div>
-            <div>
               <ModalComponent
-                name="2. Видео-эстафета «Солдатский подвиг поэтической строкой»"
+                name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
+                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
+              >
+                <Card
+                  src={img}
+                  text="Видео-посвящение «Прадеды, деды – солдаты Победы»"
+                />
+              </ModalComponent>
+              <ModalComponent
+                name=" Видео-эстафета «Солдатский подвиг поэтической строкой»"
                 href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
-              />
-            </div> */}
-              {/* <div> */}
-              {/* <ModalComponent
-                name="3. Эстафета поколений «Мир в наследство»"
+              >
+                <Card
+                  src={img}
+                  text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
+                />
+              </ModalComponent>
+              <ModalComponent
+                name="Эстафета поколений «Мир в наследство»"
                 href={Р3}
-              /> */}
+              >
+                <Card
+                  src={img}
+                  text="Эстафета поколений «Мир в наследство»                       "
+                />
+              </ModalComponent>
             </div>
           </div>
         </div>

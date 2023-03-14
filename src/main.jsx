@@ -14,7 +14,7 @@ import Genocide from "./components/genocide/Genocide";
 import PhotoMuseum from "./components/PhotoMuseum";
 import Weekend from "./components/weekend";
 import Games from "./components/games";
-import News from "./components/news";
+import { MainPage } from "./components/News/MainPage";
 import Map from "./components/map";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -24,7 +24,8 @@ import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
 import Login from "./components/auth";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { store } from "./redux/store";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const router = createBrowserRouter([
   {
@@ -166,7 +167,7 @@ const router = createBrowserRouter([
     path: "/news",
     element: (
       <Layout>
-        <News />
+        <MainPage />
       </Layout>
     ),
   },
@@ -182,6 +183,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <RouterProvider router={router} />
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   </Provider>
 );
