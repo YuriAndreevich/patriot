@@ -3,7 +3,6 @@ import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
-import Р3 from "../../../assets/patriot/Р3.pdf";
 import img from "../../../assets/cards/1.png";
 
 function page1() {
@@ -15,52 +14,26 @@ function page1() {
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
           <div className=" absolute container sm:p-20  p-10 m-auto ">
-            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">ПАМЯТЬ</p>
-            <p className="text-2xl">Мы – новое поколение!</p>
-            <p className="text-2xl">Мы никогда не забудем</p>
-            <p className="mb-2 text-2xl">ваших отважных лиц!</p>
+            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">
+              ТВОЙ ВКЛАД
+            </p>
+            <p className="text-2xl">Ведь мы иное поколенье,</p>
+            <p className="mb-2 text-2xl"> Мы будущего флаг!</p>
             <p className="mb-2 text-xl">
-              Воспитание уважения к ратному подвигу белорусского народа в годы
-              <p className="text-xl">
-                самой страшной войны в истории человечества – Великой
-                Отечественной.
-              </p>
+              Формирование навыков социально-значимой, общественно-полезной
+              деятельности на благо мира и созидания.
             </p>
             <p className="mb-10 text-xl">
-              «ПАМЯТЬ» представляет собой блок мероприятий, посвященных Великой
-              Победе.
+              «ТВОЙ ВКЛАД» - блок, содержащий цикл мероприятий по осознанию
+              учащимися общественно значимого результата своего труда,
+              социальной ответственности, взаимовыручки и взаимопомощи.
             </p>
-
-            {/* <div >
-
-              <div> */}
             <div className="flex flex-row gap-10 ">
               <ModalComponent
-                name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
+                name=" Видео-обращение «Зачем помогать людям»"
+                href="https://drive.google.com/file/d/1dKShCO1ZXq59YGgJDxotQ227FcR_qSDO/preview"
               >
-                <Card
-                  src={img}
-                  text="Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                />
-              </ModalComponent>
-              <ModalComponent
-                name=" Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
-              >
-                <Card
-                  src={img}
-                  text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                />
-              </ModalComponent>
-              <ModalComponent
-                name="Эстафета поколений «Мир в наследство»"
-                href={Р3}
-              >
-                <Card
-                  src={img}
-                  text="Эстафета поколений «Мир в наследство»                       "
-                />
+                <Card src={img} text="Видео-обращение «Зачем помогать людям»" />
               </ModalComponent>
             </div>
           </div>

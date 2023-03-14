@@ -3,7 +3,8 @@ import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
-import Р3 from "../../../assets/patriot/Р3.pdf";
+import o2 from "../../../assets/patriot/o2.pdf";
+import o1 from "../../../assets/patriot/o1.pdf";
 import img from "../../../assets/cards/1.png";
 
 function page1() {
@@ -15,51 +16,39 @@ function page1() {
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
           <div className=" absolute container sm:p-20  p-10 m-auto ">
-            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">ПАМЯТЬ</p>
-            <p className="text-2xl">Мы – новое поколение!</p>
-            <p className="text-2xl">Мы никогда не забудем</p>
-            <p className="mb-2 text-2xl">ваших отважных лиц!</p>
+            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">
+              ОТЕЧЕСТВО КАК ЦЕННОСТЬ
+            </p>
+            <p className="text-2xl">Мы верны своей отчизне,</p>
+            <p className="text-2xl mb-2">мы-времени новых рук!</p>
             <p className="mb-2 text-xl">
-              Воспитание уважения к ратному подвигу белорусского народа в годы
-              <p className="text-xl">
-                самой страшной войны в истории человечества – Великой
-                Отечественной.
-              </p>
+              Повышение интереса к созидательному труду, сохранению мира,
+              преумножению богатства Беларуси; повышение культуры этнических
+              отношений.
             </p>
             <p className="mb-10 text-xl">
-              «ПАМЯТЬ» представляет собой блок мероприятий, посвященных Великой
-              Победе.
+              «ОТЕЧЕСТВО КАК ЦЕННОСТЬ» - блок, который помогает выстроить работу
+              по знакомству с государственными ориентирами, идеалами Республики
+              Беларусь и по их приятию; по знакомству с народами, населяющими
+              нашу страну, их обычаями и традициями.
             </p>
-
-            {/* <div >
-
-              <div> */}
             <div className="flex flex-row gap-10 ">
               <ModalComponent
-                name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
+                name=" Актуальная папка для правового ликбеза «Сила закона»"
+                href={o1}
               >
                 <Card
                   src={img}
-                  text="Видео-посвящение «Прадеды, деды – солдаты Победы»"
+                  text="Актуальная папка для правового ликбеза «Сила закона»"
                 />
               </ModalComponent>
               <ModalComponent
-                name=" Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
+                name=" Встреча-диалог культур «Нас познакомил Новополоцк»"
+                href={o2}
               >
                 <Card
                   src={img}
-                  text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                />
-              </ModalComponent>
-              <ModalComponent
-                name="Эстафета поколений «Мир в наследство»"
-                href={Р3}
-              >
-                <Card
-                  src={img}
-                  text="Эстафета поколений «Мир в наследство»                       "
+                  text="Встреча-диалог культур «Нас познакомил Новополоцк»"
                 />
               </ModalComponent>
             </div>

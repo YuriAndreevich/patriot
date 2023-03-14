@@ -1,9 +1,11 @@
 import React from "react";
 import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent";
+import ModalSwiper from "@/components/SwiperZoom/ModalSwiper";
 import Card from "@/components/Card";
 import "../shyne.scss";
-import Р3 from "../../../assets/patriot/Р3.pdf";
+import data from "../../../assets/patriot/i1/data";
+import i2 from "../../../assets/patriot/i2.pdf";
 import img from "../../../assets/cards/1.png";
 
 function page1() {
@@ -15,51 +17,36 @@ function page1() {
         </video>
         <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 bg-gradient-to-r from-black to-0 w-screen h-screen top-3/4">
           <div className=" absolute container sm:p-20  p-10 m-auto ">
-            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">ПАМЯТЬ</p>
-            <p className="text-2xl">Мы – новое поколение!</p>
-            <p className="text-2xl">Мы никогда не забудем</p>
-            <p className="mb-2 text-2xl">ваших отважных лиц!</p>
+            <p className="font-bold text-6xl sm:text-9xl mb-2 shyne">
+              ИНИЦИАТИВА
+            </p>
+            <p className="text-2xl">Мы открыватели новых судеб,</p>
+            <p className="text-2xl mb-2">Новых побед и больших границ!</p>
             <p className="mb-2 text-xl">
-              Воспитание уважения к ратному подвигу белорусского народа в годы
-              <p className="text-xl">
-                самой страшной войны в истории человечества – Великой
-                Отечественной.
-              </p>
+              Привлечение учащихся к созидательной общественно-полезной
+              деятельности; развитие лидерских качеств и креативного мышления
             </p>
             <p className="mb-10 text-xl">
-              «ПАМЯТЬ» представляет собой блок мероприятий, посвященных Великой
-              Победе.
+              «ИНИЦИАТИВА» - блок, включающий в себя мероприятия по продвижению
+              любых благ, мирных инициатив, нацеленных на устойчивое развитие и
+              благополучие нашей страны.
             </p>
 
-            {/* <div >
-
-              <div> */}
             <div className="flex flex-row gap-10 ">
+              <ModalSwiper
+                name=" Акция «Размаўляй са мной па-беларуску»"
+                href=""
+                data={data}
+              >
+                <Card src={img} text="Акция «Размаўляй са мной па-беларуску»" />
+              </ModalSwiper>
               <ModalComponent
-                name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
+                name=" Историко-краеведческий маршрут «Поведай подвиги усатого героя»"
+                href={i2}
               >
                 <Card
                   src={img}
-                  text="Видео-посвящение «Прадеды, деды – солдаты Победы»"
-                />
-              </ModalComponent>
-              <ModalComponent
-                name=" Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
-              >
-                <Card
-                  src={img}
-                  text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
-                />
-              </ModalComponent>
-              <ModalComponent
-                name="Эстафета поколений «Мир в наследство»"
-                href={Р3}
-              >
-                <Card
-                  src={img}
-                  text="Эстафета поколений «Мир в наследство»                       "
+                  text="Историко-краеведческий маршрут «Поведай подвиги усатого героя»"
                 />
               </ModalComponent>
             </div>
