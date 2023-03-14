@@ -111,16 +111,16 @@ function index() {
         </div>
         <div className="flex justify-center gap-10 p-10">
           <AnimatedNumber text="Участники мероприятий" number={4695} />
-          <AnimatedNumber text="Наши достижения" number={74} />
+          <AnimatedNumber text="Наши достижения" number={84} />
           <AnimatedNumber
             text="Краеведческо-патриотические экспедиции"
-            number={15}
+            number={26}
           />
           <AnimatedNumber
             text="Благоустроенные братские могилы и памятники"
-            number={6}
+            number={18}
           />
-          <AnimatedNumber text="Молодежные проекты" number={15} />
+          <AnimatedNumber text="Молодежные проекты" number={19} />
         </div>
       </div>
     </div>

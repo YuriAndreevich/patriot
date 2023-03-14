@@ -59,7 +59,7 @@ export const PostPage = () => {
   }, [params.id, dispatch]);
 
   const fetchPost = useCallback(
-    async ({ oldImag }) => {
+    async () => {
       const { data } = await axios.get(`/posts/${params.id}`);
       setPost(data);
     },
@@ -90,15 +90,16 @@ export const PostPage = () => {
       <div className="flex gap-10 py-8">
         <div className="w-2/3">
           <div className="flex flex-col basis-1/4 flex-grow">
-            <div
+            {/* <div
               className={
                 post?.imgUrl ? "flex rouded-sm h-80" : "flex rounded-sm"
               }
             >
-              {post?.imgUrl && (
-                <img src={oldImag} alt="img" className="object-cover w-full" />
-              )}
+              {/* {post?.imgUrl && (
+                <img src={imgUrl} alt="img" className="object-cover w-full" />
+              )} 
             </div>
+          </div> */}
           </div>
 
           <div className="flex justify-between items-center pt-2">
