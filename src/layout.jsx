@@ -10,7 +10,7 @@ function layout({ children }) {
 
   return (
     <>
-      {screen.width > 1544 ? (
+      {screen.width > 991 ? (
         <>
           <Navbar />
           {children}

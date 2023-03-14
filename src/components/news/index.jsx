@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Post from "./post";
+import axios from "../../axios";
 
 function index() {
+  useEffect(() => {
+    axios.get("/posts");
+  }, []);
   return (
     <div className="container py-20 m-auto">
       <Post

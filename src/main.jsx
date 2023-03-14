@@ -23,6 +23,8 @@ import Layout from "./layout";
 import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
 import Login from "./components/auth";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const router = createBrowserRouter([
   {
@@ -178,8 +180,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );
