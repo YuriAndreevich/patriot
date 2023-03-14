@@ -36,7 +36,7 @@ function index() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <video
         autoPlay={play}
         ref={vidRef}
@@ -105,9 +105,7 @@ function index() {
           </Link>
         </div>
         <div className="  text-5xl mt-10 text-center mb-10">
-          <Link to="/newGeneration">
-          {t("мы - новое поколение!»")}
-          </Link>
+          <Link to="/newGeneration">{t("мы - новое поколение!»")}</Link>
         </div>
         <div className="flex justify-center gap-10 p-10">
           <AnimatedNumber text="Участники мероприятий" number={4695} />

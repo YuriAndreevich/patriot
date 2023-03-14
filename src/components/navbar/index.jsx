@@ -21,7 +21,7 @@ function navbar() {
   };
 
   return (
-    <nav className="sticky bottom-full   z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-900">
+    <nav className="fixed   z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-900">
       <Link to="/" className="hover:text-green-600 hover:transition-all">
         Главная
       </Link>
@@ -71,7 +71,7 @@ function navbar() {
           Бел
         </span>
       </div>
-      <div className="flex justify-center items-center bg-green-600 text-xs text-white rounded-sm p-2">
+      <div className="flex justify-center items-center bg-green-600 text-xs text-white rounded-sm p-1">
         {isAuth ? (
           <>
             <Link to="/admin">
