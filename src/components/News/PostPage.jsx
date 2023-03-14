@@ -58,13 +58,10 @@ export const PostPage = () => {
     }
   }, [params.id, dispatch]);
 
-  const fetchPost = useCallback(
-    async () => {
-      const { data } = await axios.get(`/posts/${params.id}`);
-      setPost(data);
-    },
-    [params.id]
-  );
+  const fetchPost = useCallback(async () => {
+    const { data } = await axios.get(`/posts/${params.id}`);
+    setPost(data);
+  }, [params.id]);
 
   useEffect(() => {
     fetchPost();
@@ -82,7 +79,7 @@ export const PostPage = () => {
   return (
     <div>
       <button className="flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4">
-        <Link className="flex" to={"/"}>
+        <Link className="flex" to={"/news"}>
           Назад
         </Link>
       </button>
@@ -122,7 +119,7 @@ export const PostPage = () => {
             {user?._id === post.author && (
               <div className="flex gap-3 mt-4">
                 <button className="flex items-center justify-center gap-2 text-white opacity-50">
-                  <Link to={`/${params.id}/edit`}>
+                  <Link to={`/news/${params.id}/edit`}>
                     <AiTwotoneEdit />
                   </Link>
                 </button>

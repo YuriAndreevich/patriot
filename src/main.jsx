@@ -16,7 +16,6 @@ import Weekend from "./components/weekend";
 import Games from "./components/games";
 import { MainPage } from "./components/News/MainPage";
 import Map from "./components/map";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Layout from "./layout";
@@ -24,12 +23,17 @@ import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
 import { RegisterPage } from "./components/News/RegisterPage";
 import { LoginPage } from "./components/News/LoginPage";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
-import { ChakraProvider } from "@chakra-ui/react";
 import { AddPostPage } from "./components/News/AddPostPage";
 import { PostPage } from "./components/News/PostPage";
 import { EditPostPage } from "./components/News/EditPostPage";
+import AdminPanel from "./components/AdminPanel";
+
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+
+import "./index.css";
+
+import { ChakraProvider } from "@chakra-ui/react";
 
 const router = createBrowserRouter([
   {
@@ -215,12 +219,22 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
+  {
+    path: "/admin",
+    element: (
+      <Layout>
+        <AdminPanel />
+      </Layout>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <ChakraProvider>
-      <RouterProvider router={router} />
+      <Layout>
+        <RouterProvider router={router} />
+      </Layout>
     </ChakraProvider>
   </Provider>
 );

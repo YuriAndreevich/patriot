@@ -30,7 +30,7 @@ export const EditPostPage = () => {
       updatedPost.append("id", params.id);
       updatedPost.append("image", newImage);
       dispatch(updatePost(updatedPost));
-      navigate("/posts");
+      navigate("/news");
     } catch (error) {
       console.log(error);
     }
