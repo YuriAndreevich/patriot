@@ -4,6 +4,7 @@ import "./contactMe.scss";
 import emailjs from "emailjs-com";
 import { Input, Button, Textarea, useToast } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+
 import { motion } from "framer-motion";
 
 function ContactMe() {
@@ -83,7 +84,6 @@ function ContactMe() {
             style={{ marginBottom: "10px" }}
           />
           <Button colorScheme="blackAlpha" type="submit">
-            {" "}
             {t("Отправить")}
           </Button>
         </form>

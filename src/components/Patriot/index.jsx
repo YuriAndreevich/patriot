@@ -6,11 +6,13 @@ import sm from "../../assets/svg/wsoundpause.svg";
 import sp from "../../assets/svg/wsoundplay.svg";
 import vm from "../../assets/svg/wvideopause.svg";
 import vp from "../../assets/svg/wvideoplay.svg";
+import { useTranslation } from "react-i18next";
 
 import "./shyne.scss";
 
 function index() {
   const vidRef = useRef(null);
+  const { t } = useTranslation();
 
   const [play, setPlay] = useState(true);
   const [sound, setSound] = useState(false);
@@ -93,17 +95,19 @@ function index() {
             Р
           </Link>
           <Link to="/page5" className="hover:text-green-600 font-extrabold">
-            И
+            {t("И")}
           </Link>
           <Link to="/page6" className="hover:text-green-600 font-extrabold">
-            О
+            {t("О")}
           </Link>
           <Link to="/page7" className="hover:text-green-600 font-extrabold">
             Т:
           </Link>
         </div>
         <div className="  text-5xl mt-10 text-center mb-10">
-          <Link to="/newGeneration">мы - новое поколение!»</Link>
+          <Link to="/newGeneration">
+          {t("мы - новое поколение!»")}
+          </Link>
         </div>
         <div className="flex justify-center gap-10 p-10">
           <AnimatedNumber text="Участники мероприятий" number={4695} />

@@ -1,7 +1,26 @@
 import React from "react";
 import fon from "../../assets/video/mainvideo.mp4";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function newGeneration() {
+  const mainAnim = {
+    hidden: {
+      x: -200,
+      opacity: 0,
+      duration: 10,
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeIn",
+        duration: 1,
+      },
+    },
+  };
+  const { t } = useTranslation();
+
   return (
     <div className="relative">
       <video autoPlay muted loop className="w-screen h-screen object-cover">
@@ -24,21 +43,64 @@ function newGeneration() {
             <p>А.Г.Лукашенко</p>
           </div>
           <div className="text-2xl p-10">
-            <p>Мы – новое поколение!</p>
-            <p>Мы никогда не забудем</p>
-            <p>ваших отважных лиц!</p>
-            <p>Мы - новое поколение,</p>
-            <p>Мы выдвигаем свои решения!</p>
-            <p>Мы - новое поколение,</p>
-            <p>Мы прорубаем свое течение!</p>
-            <p>Мы – новое поколение!</p>
-            <p>Мы будущего звено!</p>
-            <p>Мы открыватели новых судеб,</p>
-            <p>Новых побед и больших границ!</p>
-            <p>Мы верны своей отчизне,</p>
-            <p>мы-времени новых рук!</p>
-            <p>Ведь мы иное поколенье,</p>
-            <p>Мы будущего флаг!</p>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы – новое поколение!</p>
+              <p>Мы никогда не забудем</p>
+              <p>ваших отважных лиц!</p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы - новое поколение,</p>
+              <p>Мы выдвигаем свои решения!</p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы - новое поколение,</p>
+              <p>Мы прорубаем свое течение!</p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы – новое поколение!</p>
+              <p>Мы будущего звено!</p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы открыватели новых судеб,</p>
+              <p>Новых побед и больших границ!</p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Мы верны своей отчизне,</p>
+              <p>мы-времени новых рук!</p>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              variants={mainAnim}
+              whileInView="visible"
+            >
+              <p>Ведь мы иное поколенье,</p>
+              <p>Мы будущего флаг!</p>
+            </motion.div>
           </div>
         </div>
       </div>

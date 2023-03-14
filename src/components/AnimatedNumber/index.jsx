@@ -1,5 +1,6 @@
 import React from "react";
 import { useSpring, animated } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -16,10 +17,12 @@ function Number({ n }) {
 }
 
 function index({ number, text }) {
+  const { t } = useTranslation();
+
   return (
     <div className="w-1/2 text-center">
       <Number n={number} />
-      <p className="text-sm sm:text-xl">{text}</p>
+      <p className="text-sm sm:text-xl">{t(`${text}`)}</p>
     </div>
   );
 }

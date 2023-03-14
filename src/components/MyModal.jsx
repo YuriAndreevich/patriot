@@ -1,12 +1,10 @@
 import React from "react";
 
-export default function Modal({ children, text, title }) {
+export default function Modal({ children, text, title, src }) {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-      <button type="button" onClick={() => setShowModal(true)}>
-        {children}
-      </button>
+      <div onClick={() => setShowModal(true)}>{children}</div>
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -25,11 +23,17 @@ export default function Modal({ children, text, title }) {
                     </span>
                   </button>
                 </div>
-                {/*body*/}
+                {text ? (
+                  text
+                ) : (
+                  <iframe
+                    src={src}
+                    className="p-5"
+                    style={{ width: "40vw", height: "60vh" }}
+                  ></iframe>
+                )}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    {text}
-                  </p>
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed"></p>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
