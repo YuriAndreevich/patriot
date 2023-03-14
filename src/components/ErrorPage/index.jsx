@@ -7,12 +7,12 @@ export default function ErrorPage() {
   console.error(error);
   const navigate = useNavigate();
 
-  // function reditect() {
-  //   setTimeout(() => {
-  //     navigate("/");
-  //   }, 5000);
-  // }
-  // reditect();
+  function reditect() {
+    setTimeout(() => {
+      navigate("/");
+    }, 5000);
+  }
+  reditect();
 
   return (
     // <div className="flex items-center justify-center h-screen">
@@ -40,7 +40,7 @@ export default function ErrorPage() {
             to="/"
             className="inline-flex text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4"
           >
-            <Button>Back to Homepage</Button>
+            <Button>Вернуться на главную</Button>
           </Link>
         </div>
       </div>

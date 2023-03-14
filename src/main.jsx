@@ -16,9 +16,7 @@ import Weekend from "./components/weekend";
 import Games from "./components/games";
 import { MainPage } from "./components/News/MainPage";
 import Map from "./components/map";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
-import Layout from "./layout";
 import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
 import { RegisterPage } from "./components/News/RegisterPage";
@@ -30,6 +28,8 @@ import AdminPanel from "./components/AdminPanel";
 
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+
+import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
 
@@ -230,11 +230,11 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <ChakraProvider>
-      <Layout>
-        <RouterProvider router={router} />
-      </Layout>
-    </ChakraProvider>
-  </Provider>
+  <BrowserRouter>
+    <Provider store={store}>
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
+    </Provider>
+  </BrowserRouter>
 );
