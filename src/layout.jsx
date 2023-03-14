@@ -11,17 +11,17 @@ function layout({ children }) {
   return (
     <>
       {screen.width > 991 ? (
-        <>
+        <div className="flex flex-col">
           <Navbar />
-          {children}
+          <div className="min-h-screen bg-neutral-800">{children}</div>
           <Footer />
-        </>
+        </div>
       ) : (
-        <>
+        <div>
           <MNav2 />
           {children}
           <Footer />
-        </>
+        </div>
       )}
     </>
   );

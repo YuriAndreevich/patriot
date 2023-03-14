@@ -34,7 +34,7 @@ export const PostPage = () => {
     try {
       dispatch(removePost(params.id));
       toast("Пост был удален");
-      navigate("/posts");
+      navigate("/news");
     } catch (error) {
       console.log(error);
     }
