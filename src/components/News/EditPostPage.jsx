@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { updatePost } from "../redux/features/post/postSlice";
+import { updatePost } from "../../redux/features/post/postSlice";
 import axios from "../../axios";
 
 export const EditPostPage = () => {
@@ -59,9 +59,7 @@ export const EditPostPage = () => {
         />
       </label>
       <div className="flex object-cover py-2">
-        {oldImage && (
-          <img src={`axios.baseURL${oldImage}`} alt={oldImage.name} />
-        )}
+        {oldImage && <img src={oldImag} alt={oldImage.name} />}
         {newImage && (
           <img src={URL.createObjectURL(newImage)} alt={newImage.name} />
         )}

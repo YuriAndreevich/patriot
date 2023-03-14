@@ -22,10 +22,14 @@ import ErrorPage from "./components/ErrorPage";
 import Layout from "./layout";
 import MemoryGame from "./components/games/MemoryGame";
 import Quiz from "./components/games/quiz";
-import Login from "./components/auth";
+import { RegisterPage } from "./components/News/RegisterPage";
+import { LoginPage } from "./components/News/LoginPage";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { ChakraProvider } from "@chakra-ui/react";
+import { AddPostPage } from "./components/News/AddPostPage";
+import { PostPage } from "./components/News/PostPage";
+import { EditPostPage } from "./components/News/EditPostPage";
 
 const router = createBrowserRouter([
   {
@@ -148,10 +152,18 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/register",
+    element: (
+      <Layout>
+        <RegisterPage />
+      </Layout>
+    ),
+  },
+  {
     path: "/login",
     element: (
       <Layout>
-        <Login />
+        <LoginPage />
       </Layout>
     ),
   },
@@ -168,6 +180,30 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <MainPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/news/:id",
+    element: (
+      <Layout>
+        <PostPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/news/:id/edit",
+    element: (
+      <Layout>
+        <EditPostPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/newpost",
+    element: (
+      <Layout>
+        <AddPostPage />
       </Layout>
     ),
   },

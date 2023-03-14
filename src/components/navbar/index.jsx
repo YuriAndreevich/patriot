@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../../i18next";
-
+import { useDispatch, useSelector } from "react-redux";
+import { checkIsAuth, logout } from "../../redux/features/auth/authSlice";
+import { toast } from "react-toastify";
 function navbar() {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
   const [activeLang, setActiveLang] = useState(2);
+  const isAuth = useSelector(checkIsAuth);
+  const dispatch = useDispatch();
+  const logoutHandler = () => {
+    dispatch(logout());
+    window.localStorage.removeItem("token");
+    toast("Вы вышли из системы");
+  };
 
   return (
     <nav className="fixed z-10 w-screen flex flex-wrap sm:flex-column items-center justify-center gap-10 px-2 py-5 bg-neutral-900">
@@ -61,17 +70,13 @@ function navbar() {
           Бел
         </span>
       </div>
-      <Link to="/login">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="#fff"
-          width="30px"
-          height="30px"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
-        </svg>
-      </Link>
+      <div className="flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm px-4 py-2">
+        {isAuth ? (
+          <button onClick={logoutHandler}>Выйти</button>
+        ) : (
+          <Link to={"/login"}> Войти </Link>
+        )}
+      </div>
     </nav>
   );
 }

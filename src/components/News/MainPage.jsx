@@ -17,14 +17,14 @@ export const MainPage = () => {
 
   if (!posts.length) {
     return (
-      <div className="text-xl text-center text-white py-10">
+      <div className="text-xl text-center text-white p-20">
         Постов не существует.
       </div>
     );
   }
 
   return (
-    <div className="max-w-[900px] mx-auto py-10">
+    <div className="max-w-[900px] mx-auto p-20">
       <div className="flex justify-between gap-8">
         <div className="flex flex-col gap-10 basis-4/5">
           {posts?.map((post, idx) => (

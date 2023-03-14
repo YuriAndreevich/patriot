@@ -12,13 +12,13 @@ import {
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import axios from "../utils/axios";
-import { removePost } from "../redux/features/post/postSlice";
+import axios from "../../axios";
+import { removePost } from "../../redux/features/post/postSlice";
 import {
   createComment,
   getPostComments,
-} from "../redux/features/comment/commentSlice";
-import { CommentItem } from "../components/CommentItem";
+} from "../../redux/features/comment/commentSlice";
+import { CommentItem } from "./CommentItem";
 
 export const PostPage = () => {
   const [post, setPost] = useState(null);
@@ -58,10 +58,13 @@ export const PostPage = () => {
     }
   }, [params.id, dispatch]);
 
-  const fetchPost = useCallback(async () => {
-    const { data } = await axios.get(`/posts/${params.id}`);
-    setPost(data);
-  }, [params.id]);
+  const fetchPost = useCallback(
+    async ({ oldImag }) => {
+      const { data } = await axios.get(`/posts/${params.id}`);
+      setPost(data);
+    },
+    [params.id]
+  );
 
   useEffect(() => {
     fetchPost();
@@ -73,7 +76,7 @@ export const PostPage = () => {
 
   if (!post) {
     return (
-      <div className="text-xl text-center text-white py-10">Загрузка...</div>
+      <div className="text-xl text-center text-white p-20">Загрузка...</div>
     );
   }
   return (
@@ -93,11 +96,7 @@ export const PostPage = () => {
               }
             >
               {post?.imgUrl && (
-                <img
-                  src={`axios.baseURL${post.imgUrl}`}
-                  alt="img"
-                  className="object-cover w-full"
-                />
+                <img src={oldImag} alt="img" className="object-cover w-full" />
               )}
             </div>
           </div>
