@@ -48,7 +48,7 @@ function index() {
   }
 
   return (
-    <div className="  w-screen  bg-neutral-900">
+    <div className="sticky top-full  w-screen  bg-neutral-900">
       <div className="w-2/3  justify-between p-3 m-auto items-center sm:flex flex-none gap-3">
         <div className=" flex flex-col ">
           <Link to="/" className="hover:text-green-600 hover:transition-all">

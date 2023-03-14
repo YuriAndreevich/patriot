@@ -9,7 +9,7 @@ function index() {
   return (
     <div className="container h-5/6 py-20 m-auto flex flex-row gap-6 justify-center items-center">
       <Link to="/games/quiz">
-        <Card text="Викторина" src={quiz} />
+        <Card text="БРЕЙНШТОРМ" src={quiz} />
       </Link>
       <Link to="/games/memorygame">
         <Card text="Найди пару" src={memory} />

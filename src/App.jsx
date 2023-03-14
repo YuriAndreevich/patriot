@@ -50,9 +50,19 @@ function App() {
         <Route path="/weekend" element={<Weekend />} />
         <Route path="/photomuseum" element={<PhotoMuseum />} />
         <Route path="/games" element={<Games />} />
+        <Route path="/games/memorygame" element={<MemoryGame />} />
+        <Route path="/games/quiz" element={<Quiz />} />
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/newpost" element={<AddPostPage />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/newGeneration" element={<NewGeneration />} />
+        <Route path="/p1" element={<Page1 />} />
+        <Route path="/p2" element={<Page2 />} />
+        <Route path="/p3" element={<Page3 />} />
+        <Route path="/p4" element={<Page4 />} />
+        <Route path="/p5" element={<Page5 />} />
+        <Route path="/p6" element={<Page6 />} />
+        <Route path="/p7" element={<Page7 />} />
 
         <Route path="/news/posts" element={<PostsPage />} />
         <Route path="/news/:id" element={<PostPage />} />

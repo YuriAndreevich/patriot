@@ -77,14 +77,14 @@ export const PostPage = () => {
     );
   }
   return (
-    <div>
+    <div className="m-auto container">
       <button className="flex justify-center items-center bg-gray-600 text-xs text-white rounded-sm py-2 px-4">
         <Link className="flex" to={"/news"}>
           Назад
         </Link>
       </button>
 
-      <div className="flex gap-10 py-8">
+      <div className="flex  gap-10 py-8 flex flex-col items-center">
         <div className="w-2/3">
           <div className="flex flex-col basis-1/4 flex-grow">
             {/* <div

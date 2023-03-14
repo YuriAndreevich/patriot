@@ -6,6 +6,8 @@
 /* $green: #1ca565; */
 
 #root {
+  background-color: #242424;
+  min-height: 100vh;
   color: #fff;
 }
 #specialButton {
