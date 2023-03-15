@@ -3,20 +3,28 @@ import { hex3 } from "@react-spring/shared";
 import React from "react";
 import SwiperZoom from "../SwiperZoom";
 import { data, data2, data3 } from "./data";
-import img from "../../assets/weekend/fon.jpg";
+import img from "../../assets/img/fon1.jpg";
 
 function index() {
   return (
-    <div>
-      <div className="container py-20 m-auto z-10 flex flex-row gap-10">
-        <SwiperZoom data={data} style={{ height: "842px", width: "595px" }} />
-        <SwiperZoom data={data2} style={{ height: "842px", width: "595px" }} />
-        <SwiperZoom data={data3} style={{ height: "842px", width: "595px" }} />
+    <div
+      className=" z-0 h-screen w-screen  "
+      style={{ backgroundImage: `url('${img}')` }}
+    >
+      <div className="z-10 p-4 flex flex-row gap-3 pt-24 items-center overflow-x-auto ">
+        <SwiperZoom
+          data={data}
+          style={{ height: "842px", maxWidth: "595px" }}
+        />
+        <SwiperZoom
+          data={data2}
+          style={{ height: "842px", maxWidth: "595px" }}
+        />
+        <SwiperZoom
+          data={data3}
+          style={{ height: "842px", maxWidth: "595px" }}
+        />
       </div>
-      <div
-        className="blur-sm z-0 h-screen w-screen  "
-        style={{ backgroundImage: `url('${img}')` }}
-      ></div>
     </div>
   );
 }

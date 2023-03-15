@@ -43,8 +43,8 @@ export default function App({ data, style, preview }) {
       >
         {data.map((src, i) => (
           <SwiperSlide key={i}>
-            <div className="swiper-zoom-container ">
-              <img style={{ objectFit: "cover" }} src={src.src} />
+            <div className="swiper-zoom-container object-cover ">
+              <img className="object-cover h-full w-full" src={src.src} />
             </div>
           </SwiperSlide>
         ))}

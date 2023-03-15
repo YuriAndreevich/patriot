@@ -7,7 +7,7 @@ import quiz from "../../assets/games/2.jpg";
 
 function index() {
   return (
-    <div className="container h-5/6 py-20 m-auto flex flex-row gap-6 justify-center items-center">
+    <div className="container h-5/6 py-20 m-auto flex flex-row gap-6 justify-center items-center overflow-x-auto">
       <Link to="/games/quiz">
         <Card text="БРЕЙНШТОРМ" src={quiz} />
       </Link>

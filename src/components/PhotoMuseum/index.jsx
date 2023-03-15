@@ -5,7 +5,7 @@ import lenta from "../../assets/img/PhotoMuseum/lenta.avif";
 
 function index() {
   return (
-    <div className=" p-20 sm:p-10" style={{ backgroundImage: `url(${lenta})` }}>
+    <div className=" p-3 " style={{ backgroundImage: `url(${lenta})` }}>
       <div className="container py-20 m-auto   bg-neutral-900 p-5 rounded-2xl">
         <h1 className="text-center font-bold mb-3 ">
           МУЗЕЙ - «Беларуская хатка»
@@ -55,7 +55,7 @@ function index() {
           народа. Изучить быт и работу мастеров периода XIX – XX веков, на
           примере нашей «Беларускaй хаткi».
         </p>
-        <SwiperZoom data={data} h="96" preview={3} />
+        <SwiperZoom data={data} preview={3} />
       </div>
     </div>
   );

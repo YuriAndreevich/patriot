@@ -107,7 +107,7 @@ function index() {
         <div className="  text-5xl mt-10 text-center mb-10">
           <Link to="/newGeneration">{t("мы - новое поколение!»")}</Link>
         </div>
-        <div className="flex justify-center gap-10 p-10">
+        <div className="flex justify-center gap-10 p-10 overflow-x-auto">
           <AnimatedNumber text="Участники мероприятий" number={4695} />
           <AnimatedNumber text="Наши достижения" number={84} />
           <AnimatedNumber

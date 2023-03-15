@@ -5,6 +5,8 @@ import Card from "@/components/Card";
 import "../shyne.scss";
 import Р3 from "../../../assets/patriot/Р3.pdf";
 import img from "../../../assets/cards/1.png";
+import img2 from "../../../assets/cards/2.png";
+import img3 from "../../../assets/cards/3.png";
 
 function page1() {
   return (
@@ -34,7 +36,7 @@ function page1() {
             {/* <div >
 
               <div> */}
-            <div className="flex flex-row gap-10 ">
+            <div className="flex flex-row gap-10 overflow-x-auto ">
               <ModalComponent
                 name=" Видео-посвящение «Прадеды, деды – солдаты Победы»"
                 href="https://drive.google.com/file/d/1w7ynngNWPR3y4yAg6NmUkbdNoqK_fYff/preview"
@@ -49,7 +51,7 @@ function page1() {
                 href="https://drive.google.com/file/d/1n8LrRleB21mfnwumL24VbTos9D_SnfRH/preview"
               >
                 <Card
-                  src={img}
+                  src={img2}
                   text="Видео-эстафета «Солдатский подвиг поэтической строкой»"
                 />
               </ModalComponent>
@@ -58,7 +60,7 @@ function page1() {
                 href={Р3}
               >
                 <Card
-                  src={img}
+                  src={img3}
                   text="Эстафета поколений «Мир в наследство»                       "
                 />
               </ModalComponent>

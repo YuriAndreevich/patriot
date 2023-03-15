@@ -3,7 +3,7 @@ import fon from "../../../assets/video/mainvideo.mp4";
 import ModalComponent from "@/components/ModalComponent";
 import Card from "@/components/Card";
 import "../shyne.scss";
-import img from "../../../assets/cards/1.png";
+import img from "../../../assets/cards/4.png";
 
 function page1() {
   return (
@@ -27,7 +27,6 @@ function page1() {
               «АКТИВНАЯ ЖИЗНЕННАЯ ПОЗИЦИЯ» - мероприятия блока дают возможность
               участникам проявить себя в различных социальных ролях.
             </p>
-
 
             <div className="flex flex-row gap-10 ">
               <ModalComponent

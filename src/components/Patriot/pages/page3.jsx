@@ -5,7 +5,9 @@ import Card from "@/components/Card";
 import "../shyne.scss";
 import T2 from "../../../assets/patriot/T2.pdf";
 import T3 from "../../../assets/patriot/T3.pdf";
-import img from "../../../assets/cards/1.png";
+import img from "../../../assets/cards/5.png";
+import img2 from "../../../assets/cards/6.png";
+import img3 from "../../../assets/cards/7.png";
 
 function page1() {
   return (
@@ -39,11 +41,11 @@ function page1() {
                 <Card src={img} text="Видео-признание «Мелодия отчего дома»" />
               </ModalComponent>
               <ModalComponent name=" Перформанс «Ожившие статуи»" href={T2}>
-                <Card src={img} text="Перформанс «Ожившие статуи»" />
+                <Card src={img2} text="Перформанс «Ожившие статуи»" />
               </ModalComponent>
               <ModalComponent name="КВН «Друзья, прекрасен наш союз»" href={T3}>
                 <Card
-                  src={img}
+                  src={img3}
                   text="КВН «Друзья, прекрасен наш союз»                     "
                 />
               </ModalComponent>

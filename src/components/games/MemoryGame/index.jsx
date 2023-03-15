@@ -1,161 +1,99 @@
-import React from "react";
-import "./MemoryGame.scss";
-class MemoryGame extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      frameworks: [
-        "angular2",
-        "vue",
-        "react",
-        "grunt",
-        "phantomjs",
-        "ember",
-        "babel",
-        "ionic",
-        "gulp",
-        "meteor",
-        "yeoman",
-        "yarn",
-        "nodejs",
-        "bower",
-        "browserify",
-      ],
-      duplicatedFrameworks: [],
-      randomizedFrameworks: [],
-      finalizedFrameworks: [],
-      openedFrameworks: [],
-    };
-    this.start();
+import { useEffect, useState } from "react";
+import { images } from "../../../assets/games/MemoryGame/data";
+import Button from "../../Button";
+
+function MemoryGame() {
+  const BLANK_CARD =
+    "https://www.advgazeta.ru/upload/iblock/831/kak_pravilno_postavit_vopros_pered_ekspertom_1.jpg";
+  const [imagesArray, setImagesArray] = useState([]);
+  const [cardsChosen, setCardsChosen] = useState([]);
+  const [cardsChosenIds, setCardsChosenIds] = useState([]);
+  const [points, setPoints] = useState(0);
+
+  const [openCards, setOpenCards] = useState([]);
+
+  function createCardBoard() {
+    const imagesGenerated = images?.concat(...images);
+    console.log(imagesGenerated);
+    const shuffledArray = shuffleArray(imagesGenerated);
+    setImagesArray(shuffledArray);
   }
-  handleClick(name, index) {
-    if (this.state.openedFrameworks.length == 2) {
-      setTimeout(() => {
-        this.check();
-      }, 750);
-    } else {
-      let framework = {
-        name,
-        index,
-      };
-      let finalizedFrameworks = this.state.finalizedFrameworks;
-      let frameworks = this.state.openedFrameworks;
-      finalizedFrameworks[index].close = false;
-      frameworks.push(framework);
-      this.setState({
-        openedFrameworks: frameworks,
-        finalizedFrameworks: finalizedFrameworks,
-      });
-      if (this.state.openedFrameworks.length == 2) {
+
+  function flipImage(image, index) {
+    // CHECK IF IMAGE IS SELECTED
+    console.log(image, index);
+
+    if (cardsChosenIds?.length === 1 && cardsChosenIds[0] === index) {
+      return;
+    }
+
+    // Check if
+    if (cardsChosen?.length < 2) {
+      setCardsChosen((cardsChosen) => cardsChosen?.concat(image));
+      setCardsChosenIds((cardsChosenIds) => cardsChosenIds?.concat(index));
+
+      if (cardsChosen?.length === 1) {
+        // Check if images are the same
+        if (cardsChosen[0] === image) {
+          setPoints((points) => points + 2);
+          setOpenCards((openCards) =>
+            openCards?.concat([cardsChosen[0], image])
+          );
+        }
         setTimeout(() => {
-          this.check();
-        }, 750);
+          setCardsChosenIds([]);
+          setCardsChosen([]);
+        }, 700);
       }
     }
   }
-  check() {
-    let finalizedFrameworks = this.state.finalizedFrameworks;
-    if (
-      this.state.openedFrameworks[0].name ==
-        this.state.openedFrameworks[1].name &&
-      this.state.openedFrameworks[0].index !=
-        this.state.openedFrameworks[1].index
-    ) {
-      finalizedFrameworks[this.state.openedFrameworks[0].index].complete = true;
-      finalizedFrameworks[this.state.openedFrameworks[1].index].complete = true;
-    } else {
-      finalizedFrameworks[this.state.openedFrameworks[0].index].close = true;
-      finalizedFrameworks[this.state.openedFrameworks[1].index].close = true;
-    }
-    this.setState({
-      finalizedFrameworks,
-      openedFrameworks: [],
-    });
+
+  function isCardChosen(image, index) {
+    return cardsChosenIds?.includes(index) || openCards?.includes(image);
   }
-  start() {
-    let finalizedFrameworks = [];
-    this.state.duplicatedFrameworks = this.state.frameworks.concat(
-      this.state.frameworks
-    );
-    this.state.randomizedFrameworks = this.shuffle(
-      this.state.duplicatedFrameworks
-    );
-    this.state.randomizedFrameworks.map((name, index) => {
-      finalizedFrameworks.push({
-        name,
-        close: true,
-        complete: false,
-        fail: false,
-      });
-    });
-    this.state.finalizedFrameworks = finalizedFrameworks;
-  }
-  shuffle(array) {
-    let currentIndex = array.length,
-      temporaryValue,
-      randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    console.log(array);
     return array;
   }
-  render() {
-    return (
-      <div className="MemoryGame container py-20 m-auto">
-        <div className="playground">
-          {this.state.finalizedFrameworks.map((framework, index) => {
-            return (
-              <Card
-                framework={framework.name}
-                click={() => {
-                  this.handleClick(framework.name, index);
-                }}
-                close={framework.close}
-                complete={framework.complete}
+
+  function startOver() {
+    setCardsChosenIds([]);
+    setCardsChosen([]);
+    setPoints(0);
+    setOpenCards([]);
+  }
+
+  useEffect(() => {
+    createCardBoard();
+  }, []);
+
+  return (
+    <div className="container pt-20 m-auto">
+      <h3 className="mb-2">Найдено пар: {points / 2}</h3>
+      <Button onClick={startOver}>Начать сначала</Button>
+      <div className="mt-2 grid grid-rows-4 grid-flow-col gap-4">
+        {imagesArray?.map((image, index) => {
+          return (
+            <div
+              className="object-cover h-36 w-36 bg-cover "
+              key={index}
+              onClick={() => flipImage(image, index)}
+            >
+              <img
+                src={isCardChosen(image, index) ? image : BLANK_CARD}
+                alt=""
+                className="object-cover h-full w-full  "
               />
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-class Card extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  clicked(framework) {
-    this.props.click(framework);
-  }
-  render() {
-    return (
-      <div
-        className={
-          "card" +
-          (!this.props.close ? " opened" : "") +
-          (this.props.complete ? " matched" : "")
-        }
-        onClick={() => this.clicked(this.props.framework)}
-      >
-        <div className="front">П</div>
-        <div className="back">
-          <img
-            src={
-              "https://raw.githubusercontent.com/samiheikki/javascript-guessing-game/master/static/logos/" +
-              this.props.framework +
-              ".png"
-            }
-          />
-        </div>
-      </div>
-    );
-  }
-}
-
 export default MemoryGame;
