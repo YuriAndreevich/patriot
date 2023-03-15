@@ -1,6 +1,7 @@
 import React from "react";
 import Players from "./Players";
 import Questions from "./Questions";
+import Counters from "./Counters";
 
 function index() {
   return (
@@ -8,6 +9,7 @@ function index() {
       <div className="flex justify-between">
         <Players />
         <Questions />
+        <Counters />
       </div>
     </div>
   );
